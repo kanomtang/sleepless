@@ -38,7 +38,19 @@ public class Prompt {
 					plantlist[i].viewPlant();
 				}
 			}else if (input==2){
-				
+				System.out.println("1:Avocado");
+				System.out.println("2:Banana");
+				System.out.println("3:Orange");
+				System.out.println("4:Papaya");
+				System.out.println("5:Peach");
+				int loop2input = scan.nextInt();
+				for(int i = 0;i<plantlist.length;i++){
+					if(plantlist[i].plantName==null){
+					  setThePlant(plantlist[i],loop2input);
+					  System.out.println("Plant is planted");
+					  break;
+					}
+				}
 			}else if (input==3){
 				
 			}else if (input==4){
@@ -51,4 +63,18 @@ public class Prompt {
 		}while(checkpoint!=7);
 	}
 
+	private static Plant setThePlant(Plant p,int number){
+		if(number ==1){
+			p = new Avocado();
+		}else if(number ==2){
+			p= new Banana();
+		}else if(number ==3){
+			p = new Orange();
+		}else if(number ==4){
+			p= new Papaya();
+		}else if(number ==5){
+			p = new Peach();
+		}
+		return p;
+	}
 }

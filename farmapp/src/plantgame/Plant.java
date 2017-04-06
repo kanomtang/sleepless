@@ -3,7 +3,8 @@ package plantgame;
 import java.util.ArrayList;
 
 public class Plant {
-	private String plantName="null",plantFruit="null";
+	public String plantName="null";
+	private String plantFruit="null";
 	private int contAge=0 ,fullAge=0,contPlantWater=0,fullPlantWater=0;
 
 	
