@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Plant {
 	private String plantName="null",plantFruit="null";
 	private int contAge=0 ,fullAge=0,contPlantWater=0,fullPlantWater=0;
-	private ArrayList<Plant> plantlist = new ArrayList<Plant>();
+
 	
 	public  void viewPlant(){
 		System.out.println(plantName);
