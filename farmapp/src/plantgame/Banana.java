@@ -4,7 +4,7 @@ package plantgame;
 
 public class Banana extends Plant {
 	private String plantName="null";
-	private int contAge=0 ,fullAge=0,contPlantWater=0,fullPlantWater=0,contHealth=0,fullHealth=0;
+	private int contAge=12 ,fullAge=12,contPlantWater=5,fullPlantWater=5,contHealth=10,fullHealth=10;
 	//private String[] plantFruit = new String [1];
 		private String[] plantFruit ={"Avocado Fruit"};
 	
