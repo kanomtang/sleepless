@@ -52,7 +52,9 @@ public class Prompt {
 					}
 				}
 			}else if (input==3){
-				
+				for(int i = 0;i<plantlist.length;i++){
+					plantlist[i].plantSleep(plantlist[i]);
+				}
 			}else if (input==4){
 				
 			}else if (input==5){

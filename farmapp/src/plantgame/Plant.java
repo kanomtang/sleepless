@@ -20,7 +20,7 @@ public class Plant {
 		
 	}public void waterPlant(){
 		
-	}public void plantSleep(){
+	}public void plantSleep(Plant p){
 		
 	}
 	
