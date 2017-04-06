@@ -14,7 +14,7 @@ public class Prompt {
 		 Plant beg1,beg2,beg3,beg4 ;
 		int checkpoint= 0 ;
 		do{
-			System.out.println();
+			System.out.println("test");
 			System.out.println();
 			System.out.println();
 			System.out.println();
