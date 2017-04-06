@@ -14,11 +14,11 @@ public class Prompt {
 		 Plant beg1,beg2,beg3,beg4 ;
 		int checkpoint= 0 ;
 		do{
-			System.out.println("test");
-			System.out.println();
-			System.out.println();
-			System.out.println();
-			System.out.println();
+			System.out.println("Hello welcome to Sleepless Plant game");
+			System.out.println("Choose your option Press the number and hit enter");
+			System.out.println("1:View Plants");
+			System.out.println("2:Plant a plant");
+			System.out.println("3:Sleep");
 			System.out.println();
 			System.out.println();
 			System.out.println();
