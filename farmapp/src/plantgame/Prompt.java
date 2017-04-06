@@ -37,6 +37,7 @@ public class Prompt {
 				for(int i =0 ;i<plantlist.length;i++){
 					plantlist[i].viewPlant();
 				}
+				
 			}else if (input==2){
 				System.out.println("1:Avocado");
 				System.out.println("2:Banana");
