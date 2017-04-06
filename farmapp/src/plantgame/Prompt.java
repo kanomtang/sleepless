@@ -7,11 +7,18 @@ import java.util.Scanner;
 
 public class Prompt {
 
+	private static Scanner scan;
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 	
-		 ArrayList<Plant> plantlist = new ArrayList<Plant>();
-		 Plant beg1,beg2,beg3,beg4 ;
+		 
+		 //Plant[] plantlist= new Plant[4];
+		 Plant beg1=new Plant() ;
+		 Plant beg2=new Plant() ;
+		 Plant beg3=new Plant() ;
+		 Plant beg4=new Plant() ;
+		 Plant[] plantlist= {beg1,beg2,beg3,beg4};
 		int checkpoint= 0 ;
 		do{
 			System.out.println("Hello welcome to Sleepless Plant game");
@@ -23,19 +30,22 @@ public class Prompt {
 			System.out.println();
 			System.out.println();
 			
-			Scanner input = new Scanner(System.in);
-			System.out.println("please choose option by pressing the number "+input);
-			if(checkpoint==1){
+			scan = new Scanner(System.in);
+			System.out.println("please choose option by pressing the number ");
+			int input = scan.nextInt();
+			if(input==1){
+				for(int i =0 ;i<plantlist.length;i++){
+					plantlist[i].viewPlant();
+				}
+			}else if (input==2){
 				
-			}else if (checkpoint==2){
+			}else if (input==3){
 				
-			}else if (checkpoint==3){
+			}else if (input==4){
 				
-			}else if (checkpoint==4){
+			}else if (input==5){
 				
-			}else if (checkpoint==5){
-				
-			}else if (checkpoint==6){
+			}else if (input==6){
 				
 			}
 		}while(checkpoint!=7);

@@ -5,8 +5,8 @@ package plantgame;
 public class Orange extends Plant {
 	private String plantName="null";
 	private int contAge=0 ,fullAge=0,contPlantWater=0,fullPlantWater=0;
-	private String[] plantFruit = new String [1];
-	String[] plantFurit ={"Peach Fruit"};
+	//private String[] plantFruit = new String [1];
+		private String[] plantFruit ={"Avocado Fruit"};
 	
 	
 	@Override
