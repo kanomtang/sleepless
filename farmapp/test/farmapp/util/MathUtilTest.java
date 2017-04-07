@@ -5,9 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class MathUtilTest {
-
-	
-	
+//i wanna test the add method
 	@Test
 	public void test() {
 		fail("Not yet implemented");
