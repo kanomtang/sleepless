@@ -4,7 +4,7 @@ package plantgame;
 
 public class Papaya extends Plant{
 	private String plantName="null";
-	private int contAge=0 ,fullAge=0,contPlantWater=0,fullPlantWater=0,contHealth=0,fullHealth=0;
+	private int contAge=7 ,fullAge=7,contPlantWater=3,fullPlantWater=3,contHealth=4,fullHealth=4;
 	//private String[] plantFruit = new String [1];
 		private String[] plantFruit ={"Avocado Fruit"};
 	@Override

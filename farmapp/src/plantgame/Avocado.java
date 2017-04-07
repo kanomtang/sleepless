@@ -2,7 +2,7 @@ package plantgame;
 
 public class Avocado extends Plant  {
 	private String plantName="null";
-	private int contAge=0 ,fullAge=0,contPlantWater=0,fullPlantWater=0,contHealth=0,fullHealth=0;
+	private int contAge=10 ,fullAge=10,contPlantWater=8,fullPlantWater=8,contHealth=10,fullHealth=10;
 	//private String[] plantFruit = new String [1];
 	private String[] plantFruit ={"Avocado Fruit"};
 	
