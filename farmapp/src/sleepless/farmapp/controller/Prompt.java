@@ -95,12 +95,13 @@ public class Prompt {
 				}
 				
 			} else if (input == 3) {
-//			//option #3 sleep	
-//				for (int i = 0; i < plantlist.size(); i++) {
-//					
-//					plantlist.get(i).plantSleep(plantlist.get(i));
-//				}
-//			} else if (input == 4) {
+			//option #3 sleep	
+				
+				for (int i = 0; i < plantlist.size(); i++) {
+					
+					plantlist.get(i).plantSleep(plantlist.get(i));
+				}
+			} else if (input == 4) {
 
 			} else if (input == 5) {
 
