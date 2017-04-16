@@ -12,6 +12,6 @@ public class MathUtilTest {
 	}
 	public void testAdd(){
 		MathUtil mathUtil = new MathUtil();
-		assertEquals(mathUtil.add(5, 4),9);
+		assertEquals(9,mathUtil.add(5, 4));
 	}
 }

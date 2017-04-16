@@ -1,13 +1,14 @@
-package plantgame;
+package sleepless.farmapp.model.PlantList;
 
-public class Avocado extends Plant  {
+public class emptyPlant implements Plant {
+
 	private String plantName="null";
-	private int contAge=10 ,fullAge=10,contPlantWater=8,fullPlantWater=8,contHealth=10,fullHealth=10;
+	private int contAge=0 ,fullAge=0,contPlantWater=0,fullPlantWater=0,contHealth=0,fullHealth=0;
 	//private String[] plantFruit = new String [1];
-	private String[] plantFruit ={"Avocado Fruit"};
+		private String[] plantFruit ={"Empty"};
 	
 	
-	@Override
+	
 	public void viewPlant() {
 		// TODO Auto-generated method stub
 		System.out.println(plantName);
@@ -15,23 +16,24 @@ public class Avocado extends Plant  {
 		System.out.println("   Health:("+contHealth+"//"+fullHealth+") (more hearths, "
 				+ "longer it can live without water)");
 		System.out.println("   Water:("+contAge+"//"+fullAge+") ");
-		System.out.println("");
 		for(int i = 0;i<plantFruit.length;i++){
 		System.out.println("   Fruit:"+ plantFruit[i]);	
 		}
 		
 	}
-	@Override
+
 	public void plantSeed() {
 		// TODO Auto-generated method stub
 		
 	}
-	@Override
+
+
 	public void waterPlant() {
 		// TODO Auto-generated method stub
-	
+		
 	}
-	@Override
+
+	
 	public void plantSleep(Plant p) {
 		// TODO Auto-generated method stub
 		contAge++;
@@ -40,11 +42,17 @@ public class Avocado extends Plant  {
 			contHealth--;
 		}
 		if(contHealth==0){
-			System.out.println("Avocado died now");
-			p = new Plant();
+			System.out.println("Peach died now");
+			p = null;
 			
 		}
 		
 	}
-    
+
+	public String getPlantName() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+
 }
