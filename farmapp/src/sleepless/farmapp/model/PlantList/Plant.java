@@ -6,6 +6,7 @@ public interface Plant {
 
 
 	
+	
 	public  void viewPlant();
 	public void plantSeed();
 	public void waterPlant();
