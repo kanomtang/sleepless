@@ -8,7 +8,7 @@ public class MathUtilTest {
 //i wanna test the add method
 	@Test
 	public void test() {
-		fail("Not yet implemented");
+		//fail("Not yet implemented");
 	}
 	public void testAdd(){
 		MathUtil mathUtil = new MathUtil();

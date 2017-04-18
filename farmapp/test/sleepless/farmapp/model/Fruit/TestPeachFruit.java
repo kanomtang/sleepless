@@ -1,6 +1,10 @@
 package sleepless.farmapp.model.Fruit;
 
-public class PeachFruit implements Fruit {
+
+
+
+public class TestPeachFruit implements TestFruit {
+
 	private String FruitName="Peach Fruit";
 	private int FruitAmount =1;
 	

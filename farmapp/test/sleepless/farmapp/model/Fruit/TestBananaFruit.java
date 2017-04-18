@@ -1,14 +1,16 @@
 package sleepless.farmapp.model.Fruit;
 
-public class OrangeFruit implements Fruit {
-	private String FruitName="Orange Fruit";
+
+
+
+public class TestBananaFruit implements TestFruit {
+	private String FruitName="Banana Fruit";
 	private int FruitAmount =1;
+	
 	public String getFruitName() {
 		return FruitName;
 	}
-	
 	public int getFruitAmount() {
 		return FruitAmount;
 	}
-
 }
