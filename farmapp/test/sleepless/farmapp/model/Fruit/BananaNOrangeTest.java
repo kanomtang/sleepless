@@ -5,11 +5,9 @@ import org.junit.Test;
 
 
 public class BananaNOrangeTest {
-//    @Test
-//	public void test(){
-//		
-//	}
+
 	
+	//This class for test Class TestOrangeFruit and Class TestBananaFruit
 	
 
 	@Test
