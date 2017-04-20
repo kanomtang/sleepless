@@ -12,6 +12,9 @@ public class BananaFruit implements Fruit {
 	public int getFruitAmount() {
 		return FruitAmount;
 	}
+	public void setFruitAmount(int fruitAmount) {
+		FruitAmount = fruitAmount;
+	}
 
 	
 }

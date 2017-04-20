@@ -12,5 +12,8 @@ public class PapayaFruit implements Fruit {
 	public int getFruitAmount() {
 		return FruitAmount;
 	}
+	public void setFruitAmount(int fruitAmount) {
+		FruitAmount = fruitAmount;
+	}
 
 }

@@ -35,18 +35,21 @@ public class Prompt {
 		Plant beg2 = new emptyPlant();
 		Plant beg3 = new emptyPlant();
 		Plant beg4 = new emptyPlant();
-		// Plant[] plantlist= {beg1,beg2,beg3,beg4};
+		// these line create the beg and input empty plant
 		List<Plant> plantlist = new ArrayList<Plant>();
 		plantlist.add(beg1);
 		plantlist.add(beg2);
 		plantlist.add(beg3);
 		plantlist.add(beg4);
+		// these line create for show all of plant type 
 		List<Plant> seedlist = new ArrayList<Plant>();
 		seedlist.add(new Avocado());
 		seedlist.add(new Banana());
 		seedlist.add(new Orange());
 		seedlist.add(new Papaya());
 		seedlist.add(new Peach());
+		// this line for create the inventory
+		
 
 		int checkpoint = 0;
 		

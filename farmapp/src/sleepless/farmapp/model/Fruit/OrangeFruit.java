@@ -11,4 +11,8 @@ public class OrangeFruit implements Fruit {
 		return FruitAmount;
 	}
 
+	public void setFruitAmount(int fruitAmount) {
+		FruitAmount = fruitAmount;
+	}
+
 }

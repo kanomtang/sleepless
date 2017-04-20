@@ -12,4 +12,8 @@ public class PeachFruit implements Fruit {
 		return FruitName;
 	}
 
+	public void setFruitAmount(int fruitAmount) {
+		FruitAmount = fruitAmount;
+	}
+
 }
