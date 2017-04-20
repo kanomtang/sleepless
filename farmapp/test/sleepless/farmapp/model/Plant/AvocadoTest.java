@@ -25,11 +25,7 @@ public class AvocadoTest {
 		TestAvocado t = new TestAvocado();
 		t.plantSleep(t);
 	}
-	@Test
-	public void testPlantAvocado(){
-		TestAvocado t = new TestAvocado();
-		t.plantSeed();
-	}
+	
 	@Test
 	public void testWaterAvocado(){
 		TestAvocado t = new TestAvocado();
