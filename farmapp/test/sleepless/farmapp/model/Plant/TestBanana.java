@@ -59,6 +59,16 @@ public class TestBanana implements Plant{
 	public String getPlantName() {
 		return plantName;
 	}
+	public int getContPlantWater() {
+		return contPlantWater;
+	}
+
+
+
+	public int getContHealth() {
+		return contHealth;
+	}
+    
 
 }
 

@@ -24,6 +24,14 @@ public class BananaTest {
 	public void testBananaSleep(){
 		TestBanana t = new TestBanana();
 		t.plantSleep(t);
+		assertEquals(4, t.getContPlantWater());
+		
+		assertEquals(10, t.getContHealth());
+	}
+	@Test
+	public void testWaterAvocado(){
+		TestBanana t = new TestBanana();
+		t.waterPlant();
 	}
 	
 
