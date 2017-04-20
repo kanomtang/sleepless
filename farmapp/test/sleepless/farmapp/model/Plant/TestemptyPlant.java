@@ -40,7 +40,7 @@ public class TestemptyPlant implements Plant {
 			contHealth--;
 		}
 		if(contHealth==0){
-			System.out.println("Peach died now");
+			System.out.println("Plant died now");
 			p = null;
 			
 		}
@@ -50,6 +50,16 @@ public class TestemptyPlant implements Plant {
 	public String getPlantName() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+	
+	public int getContPlantWater() {
+		return contPlantWater;
+	}
+
+
+
+	public int getContHealth() {
+		return contHealth;
 	}
 	
 
