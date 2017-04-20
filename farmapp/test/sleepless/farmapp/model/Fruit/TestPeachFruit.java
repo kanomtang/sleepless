@@ -5,15 +5,23 @@ package sleepless.farmapp.model.Fruit;
 
 public class TestPeachFruit implements TestFruit {
 
-	private String FruitName="Peach Fruit";
-	private int FruitAmount =1;
+	//This class for test Class TestPeachFruit
 	
-	public int getFruitAmount() {
-		return FruitAmount;
-	}
 
-	public String getFruitName() {
-		return FruitName;
+	
+	@Test
+    public void testGetPeachName(){
+    	TestPeachFruit t = new TestPeachFruit();
+    	
+		assertEquals("Peach Fruit", t.getFruitName());
+    }
+	
+	@Test
+	public void testGetPeachAmount(){
+		TestPeachFruit t = new TestPeachFruit();
+		 
+		assertEquals(1, t.getFruitAmount());
 	}
-
+	
+	
 }
