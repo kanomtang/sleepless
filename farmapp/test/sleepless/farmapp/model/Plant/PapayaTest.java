@@ -24,6 +24,10 @@ public class PapayaTest {
 	public void testPapayaSleep(){
 		TestPapaya t = new TestPapaya();
 		t.plantSleep(t);
+		// expect actual
+		assertEquals(2, t.getContPlantWater());
+		
+		assertEquals(4, t.getContHealth());
 	}
 	
 

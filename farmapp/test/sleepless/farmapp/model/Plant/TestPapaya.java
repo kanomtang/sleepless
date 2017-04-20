@@ -11,7 +11,7 @@ import sleepless.farmapp.model.PlantList.emptyPlant;
 
 public class TestPapaya implements Plant {
 
-	private String plantName = "Avocado", plantStage = "Seed";
+	private String plantName = "Papaya", plantStage = "Seed";
 	private int contAge = 7, fullAge = 7, contPlantWater = 3, fullPlantWater = 3, contHealth = 4, fullHealth = 4;
 	// private String[] plantFruit = new String [1];
 	// private String[] plantFruit ={"Avocado Fruit"};
@@ -61,7 +61,16 @@ public class TestPapaya implements Plant {
 		return plantName;
 	}
 
+	public int getContPlantWater() {
+		return contPlantWater;
+	}
 
+
+
+	public int getContHealth() {
+		return contHealth;
+	}
+	
 		
 	
 }
