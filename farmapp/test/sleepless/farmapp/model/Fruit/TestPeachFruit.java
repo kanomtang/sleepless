@@ -12,5 +12,6 @@ public class TestPeachFruit implements TestFruit {
 	}
 	public String getFruitName() {
 		return FruitName;
-	
+	}
 }
+
