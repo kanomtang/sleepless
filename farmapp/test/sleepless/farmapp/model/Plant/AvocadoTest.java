@@ -27,7 +27,7 @@ public class AvocadoTest {
 		// expect actual
 		assertEquals(7, t.getContPlantWater());
 		
-		assertEquals(9, t.getContHealth());
+		assertEquals(10, t.getContHealth());
 	}
 	
 	@Test
