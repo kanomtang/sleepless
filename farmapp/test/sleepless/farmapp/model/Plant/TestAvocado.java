@@ -72,7 +72,4 @@ public class TestAvocado implements Plant{
 		return contHealth;
 	}
     
-
-	
-	
 }

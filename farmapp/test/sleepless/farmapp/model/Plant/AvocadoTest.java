@@ -36,9 +36,5 @@ public class AvocadoTest {
 		t.waterPlant();
 	}
 	
-	
-	
-
-	
 
 }
