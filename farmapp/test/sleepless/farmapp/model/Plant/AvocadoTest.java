@@ -24,6 +24,10 @@ public class AvocadoTest {
 	public void testAvocadoSleep(){
 		TestAvocado t = new TestAvocado();
 		t.plantSleep(t);
+		// expect actual
+		assertEquals(7, t.getContPlantWater());
+		
+		assertEquals(9, t.getContHealth());
 	}
 	
 	@Test

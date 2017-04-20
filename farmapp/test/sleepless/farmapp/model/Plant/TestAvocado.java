@@ -61,4 +61,16 @@ public class TestAvocado implements Plant{
 	}
 
 
+
+	public int getContPlantWater() {
+		return contPlantWater;
+	}
+
+
+
+	public int getContHealth() {
+		return contHealth;
+	}
+    
+
 }
