@@ -8,7 +8,7 @@ import sleepless.farmapp.model.PlantList.Plant;
 import sleepless.farmapp.model.PlantList.emptyPlant;
 
 public class TestOrange implements Plant {
-	private String plantName = "Avocado", plantStage = "Seed";
+	private String plantName = "Orange", plantStage = "Seed";
 	private int contAge = 20, fullAge = 20, contPlantWater = 10, fullPlantWater = 10, contHealth = 8, fullHealth = 8;
 	// private String[] plantFruit = new String [1];
 	// private String[] plantFruit ={"Avocado Fruit"};
@@ -57,5 +57,14 @@ public class TestOrange implements Plant {
 	public String getPlantName() {
 		return plantName;
 	}
+	
+	public int getContPlantWater() {
+		return contPlantWater;
+	}
 
+
+
+	public int getContHealth() {
+		return contHealth;
+	}
 }

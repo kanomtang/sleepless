@@ -24,6 +24,10 @@ public class OrangeTest {
 	public void testOrangeSleep(){
 		TestOrange t = new TestOrange();
 		t.plantSleep(t);
+		// expect actual
+				assertEquals(9, t.getContPlantWater());
+				
+				assertEquals(8, t.getContHealth());
 	}
 	@Test
 	public void testWaterOrange(){
