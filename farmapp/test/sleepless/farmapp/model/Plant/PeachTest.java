@@ -24,6 +24,10 @@ public class PeachTest {
 	public void testPeachSleep(){
 		TestPeach t = new TestPeach();
 		t.plantSleep(t);
+		// expect actual
+		assertEquals(4, t.getContPlantWater());
+		
+		assertEquals(3, t.getContHealth());
 	}
 	
 
