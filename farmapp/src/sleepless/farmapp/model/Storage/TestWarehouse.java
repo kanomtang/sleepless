@@ -9,6 +9,7 @@ public class TestWarehouse {
 	@Test
 	public void test() {
 		fail("Not yet implemented");
+		//for testing collecting method
 	}
-
+    
 }
