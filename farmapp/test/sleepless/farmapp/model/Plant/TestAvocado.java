@@ -35,10 +35,7 @@ public class TestAvocado implements Plant{
 
 	}
 
-	public void plantSeed() {
-		// TODO Auto-generated method stub
-
-	}
+	
 
 	public void waterPlant() {
 		// TODO Auto-generated method stub
