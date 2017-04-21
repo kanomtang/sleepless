@@ -27,6 +27,10 @@ public class AvocadoTest {
 		assertEquals(7, t.getContPlantWater());
 		
 		assertEquals(10, t.getContHealth());
+		
+		//this is for testing the growup method
+		assertEquals("Seedling", t.getPlantStage());
+		System.out.println(t.getPlantStage());
 	}
 	
 	@Test
@@ -38,6 +42,11 @@ public class AvocadoTest {
         assertEquals(0, t.getContPlantWater());
 		
 		assertEquals(9, t.getContHealth());
+		
+		//this is for testing the growup method
+				assertEquals("Mature", t.getPlantStage());
+				System.out.println(t.getPlantStage());
+		
 		
 	}
 	@Test
@@ -51,6 +60,10 @@ public class AvocadoTest {
 		assertEquals(0, t.getContHealth());
 		
 		assertEquals(null, t.getPlantName());
+		//this is for testing the growup method
+				assertEquals("dead", t.getPlantStage());
+				System.out.println(t.getPlantStage());
+		
 	}
 	@Test
 	public void testWaterAvocado(){
