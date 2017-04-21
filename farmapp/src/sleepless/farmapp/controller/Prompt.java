@@ -63,7 +63,7 @@ public class Prompt {
 			System.out.println();
 			System.out.println();
 			System.out.println();
-			System.out.println("7:Exit game ");
+			System.out.println("8:Exit game ");
 
 			scan = new Scanner(System.in);
 			System.out.println("please choose option by pressing the number ");
@@ -106,13 +106,14 @@ public class Prompt {
 					plantlist.get(i).plantSleep();
 				}
 			} else if (input == 4) {
+				//Harvest Plant
 
 			} else if (input == 5) {
-
+				//View Inventory
 			} else if (input == 6) {
-
+				//Visit shop
 			}else if(input == 7){
-				
+				//Sleep 1 
 			}
 		} while (checkpoint != 8);
 	}
