@@ -35,27 +35,27 @@ public class emptyPlant implements Plant {
 
 	}
 
-	public void plantSleep(Plant p) {
+	public void plantSleep() {
 		// TODO Auto-generated method stub
 		
-		p.increasingage(1);
-		//contAge++;
-		//if (contPlantWater != 0) {
-		if(p.getContPlantWater()!=0){
-			//contPlantWater--;
-			p.decreasingWater(1);
+		//p.increasingage(1);
+		contAge++;
+		if (contPlantWater != 0) {
+		//if(p.getContPlantWater()!=0){
+			contPlantWater--;
+			//p.decreasingWater(1);
 		}
-		//if (contPlantWater == 0) {
-		if(p.getContPlantWater()==0){
-			//if (contHealth > 0) {
-		     if(p.getContHealth()>0){
+		if (contPlantWater == 0) {
+		//if(p.getContPlantWater()==0){
+			if (contHealth > 0) {
+		    // if(p.getContHealth()>0){
 				contHealth--;
-				p.decreasingHealth(1);
+				//p.decreasingHealth(1);
 			}
-			//else if (contHealth == 0) {
-			else if (p.getContHealth()==0){
+			else if (contHealth == 0) {
+			//else if (p.getContHealth()==0){
 				System.out.println("Avocado died now");
-				setToEmpty(p);
+				setToEmpty();
 				
 
 			}
@@ -158,16 +158,15 @@ public class emptyPlant implements Plant {
 		this.contAge+=agepara;
 		
 	}
-	private static void setToEmpty(Plant p){
-		p.setContAge(0);
-		p.setContHealth(0);
-		p.setContPlantWater(0);
-		p.setFullAge(0);
-		p.setFullHealth(0);
-		p.setFullPlantWater(0);
-		p.setPlantFruit(null);
-		p.setPlantName(null);
-		p.setPlantStage(null);
+	private  void setToEmpty(){
+	this.contAge=0;
+	this.contHealth=0;
+	this.contPlantWater=0;
+	this.fullAge=0;
+	this.fullHealth=0;
+	this.fullPlantWater=0;
+	this.plantName=null;
+	this.plantStage=null;
 	}
 
 	

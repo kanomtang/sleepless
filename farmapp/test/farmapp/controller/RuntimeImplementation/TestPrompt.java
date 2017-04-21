@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import org.junit.Test;
+
 import sleepless.farmapp.model.PlantList.Avocado;
 import sleepless.farmapp.model.PlantList.Banana;
 import sleepless.farmapp.model.PlantList.Orange;
@@ -102,7 +104,7 @@ public class TestPrompt {
 				
 				for (int i = 0; i < plantlist.size(); i++) {
 					
-					plantlist.get(i).plantSleep(plantlist.get(i));
+					plantlist.get(i).plantSleep();
 				}
 			} else if (input == 4) {
 
@@ -130,5 +132,6 @@ public class TestPrompt {
 		}
 		return p;
 	}
+	
 	
 }

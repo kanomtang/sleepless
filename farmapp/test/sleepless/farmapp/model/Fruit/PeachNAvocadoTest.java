@@ -13,26 +13,26 @@ public class PeachNAvocadoTest {
 	
 	@Test
     public void testGetPeachName(){
-    	TestPeachFruit t = new TestPeachFruit();
+    	PeachFruit t = new PeachFruit();
     	
 		assertEquals("Peach Fruit", t.getFruitName());
     }
 	
 	@Test
 	public void testGetPeachAmount(){
-		TestPeachFruit t = new TestPeachFruit();
+		PeachFruit t = new PeachFruit();
 		 
 		assertEquals(1, t.getFruitAmount());
 	}
 	
 	@Test
 	public void testGetAvocadoName(){
-		TestAvocadoFruit t = new TestAvocadoFruit();
+		AvocadoFruit t = new AvocadoFruit();
 		assertEquals("Avocado Fruit", t.getFruitName());
 	}
 	@Test
 	public void testGetAvocadoAmount(){
-		TestAvocadoFruit t = new TestAvocadoFruit();
+		AvocadoFruit t = new AvocadoFruit();
 		 
 		assertEquals(1, t.getFruitAmount());
 	}

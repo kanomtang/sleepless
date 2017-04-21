@@ -103,7 +103,7 @@ public class Prompt {
 				
 				for (int i = 0; i < plantlist.size(); i++) {
 					
-					plantlist.get(i).plantSleep(plantlist.get(i));
+					plantlist.get(i).plantSleep();
 				}
 			} else if (input == 4) {
 

@@ -13,26 +13,26 @@ public class BananaNOrangeTest {
 	
 	@Test
     public void testGetOrangeName(){
-    	TestOrangeFruit t = new TestOrangeFruit();
+    	OrangeFruit t = new OrangeFruit();
     	
 		assertEquals("Orange Fruit", t.getFruitName());
     }
 	
 	@Test
 	public void testGetOrangeAmount(){
-		TestOrangeFruit t = new TestOrangeFruit();
+		OrangeFruit t = new OrangeFruit();
 		 
 		assertEquals(1, t.getFruitAmount());
 	}
 	
 	@Test
 	public void testGetBanana(){
-		TestBananaFruit t = new TestBananaFruit();
+		BananaFruit t = new BananaFruit();
 		assertEquals("Banana Fruit", t.getFruitName());
 	}
 	@Test
 	public void testGetBananaAmount(){
-		TestBananaFruit t = new TestBananaFruit();
+		BananaFruit t = new BananaFruit();
 		 
 		assertEquals(1, t.getFruitAmount());
 	}

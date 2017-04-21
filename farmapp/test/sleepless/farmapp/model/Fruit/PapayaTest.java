@@ -8,14 +8,14 @@ public class PapayaTest {
 	//This class for test Class TestPapayaFruit
 	@Test
     public void testGetPapayaName(){
-    	TestPapayaFruit t = new TestPapayaFruit();
+    	PapayaFruit t = new PapayaFruit();
     	
 		assertEquals("Papaya Fruit", t.getFruitName());
     }
 	
 	@Test
 	public void testGetPapayaAmount(){
-		TestPapayaFruit t = new TestPapayaFruit();
+		PapayaFruit t = new PapayaFruit();
 		 
 		assertEquals(1, t.getFruitAmount());
 	}

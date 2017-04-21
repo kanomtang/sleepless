@@ -14,7 +14,7 @@ public interface Plant {
 public  void viewPlant();
 	
 	public void waterPlant();
-	public void plantSleep(Plant p);
+	public void plantSleep();
 	public String getPlantName();
 	public int getContPlantWater() ;
 	public int getContHealth() ;

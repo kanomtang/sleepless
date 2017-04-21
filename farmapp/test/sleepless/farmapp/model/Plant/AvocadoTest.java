@@ -3,27 +3,26 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import sleepless.farmapp.model.PlantList.Avocado;
+
 
 
 public class AvocadoTest {
-	@Test
-    public void testAddAvocadoName(){
-    	TestAvocado t = new TestAvocado();
-    }
+
 	@Test
 	public void testgetAvocadoName(){
-		TestAvocado t = new TestAvocado();
+		Avocado t = new Avocado();
 		assertEquals("Avocado",t.getPlantName());
 	}
 	@Test
 	public void testviewAvocado(){
-		TestAvocado t = new TestAvocado();
+		Avocado t = new  Avocado();
 		t.viewPlant();
 	}
 	@Test
-	public void testAvocadoSleep1daywithwater(){
-		TestAvocado t = new TestAvocado();
-		t.plantSleep(t);
+	public void testAvocadoSleep(){
+		Avocado t = new Avocado();
+		t.plantSleep();
 		// expect actual
 		assertEquals(7, t.getContPlantWater());
 		
@@ -31,39 +30,31 @@ public class AvocadoTest {
 	}
 	
 	@Test
-	public void testAvocadoSleep5daywithoutWater(){
-		TestAvocado t = new TestAvocado();
-		t.plantSleep(t);
-		t.plantSleep(t);
-		t.plantSleep(t);
-		t.plantSleep(t);
-		t.plantSleep(t);
+	public void testAvocadoSleepwithoutwater8Days(){
+		Avocado t = new Avocado();
+		for(int i = 0;i<8;i++){
+			t.plantSleep();
+		}
+        assertEquals(0, t.getContPlantWater());
 		
-		assertEquals(3, t.getContPlantWater());
-		
-		assertEquals(10, t.getContHealth());
+		assertEquals(9, t.getContHealth());
 		
 	}
-	
 	@Test
-	public void sleepwithoutGivingWaterAndDie (){
-		TestAvocado t = new TestAvocado();
-		
-		for(int i =0;i<13;i++){
-			//t.testPk(t);
-			t.plantSleep(t);
+	public void testAvocadoSleepwithoutWater13Days(){
+		Avocado t = new Avocado();
+		for(int i = 0;i<18;i++){
+			t.plantSleep();
 		}
-		assertEquals(0, t.getContPlantWater());
-		System.out.println(t.getContPlantWater());
-		assertEquals(0, t.getContHealth());
-		System.out.println(t.getContHealth());
-		System.out.println(t.getPlantName());
+        assertEquals(0, t.getContPlantWater());
 		
-		assertEquals(null,t.getPlantName());
+		assertEquals(0, t.getContHealth());
+		
+		assertEquals(null, t.getPlantName());
 	}
 	@Test
 	public void testWaterAvocado(){
-		TestAvocado t = new TestAvocado();
+		Avocado t = new Avocado();
 		t.waterPlant();
 	}
 	
