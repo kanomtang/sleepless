@@ -7,7 +7,7 @@ import sleepless.farmapp.model.Fruit.OrangeFruit;
 
 public class Orange implements Plant {
 	private String plantName = "Orange", plantStage = "Seed";
-	private int contAge = 20, fullAge = 20, contPlantWater = 10, fullPlantWater = 10, contHealth = 8, fullHealth = 8;
+	private int contAge = 1, fullAge = 20, contPlantWater = 10, fullPlantWater = 10, contHealth = 8, fullHealth = 8;
 	// private String[] plantFruit = new String [1];
 	// private String[] plantFruit ={"Avocado Fruit"};
 	private ArrayList<Fruit> plantFruit = new ArrayList<Fruit>();
@@ -37,33 +37,36 @@ public class Orange implements Plant {
 
 	public void plantSleep() {
 		// TODO Auto-generated method stub
-		
-		//p.increasingage(1);
+
+		// p.increasingage(1);
 		contAge++;
+		 growup();
+		if (contAge == fullAge) {
+			System.out.println("Orange died now");
+			setToEmpty();
+		}
 		if (contPlantWater != 0) {
-		//if(p.getContPlantWater()!=0){
+			// if(p.getContPlantWater()!=0){
 			contPlantWater--;
-			//p.decreasingWater(1);
+			// p.decreasingWater(1);
 		}
 		if (contPlantWater == 0) {
-		//if(p.getContPlantWater()==0){
+			// if(p.getContPlantWater()==0){
 			if (contHealth > 0) {
-		    // if(p.getContHealth()>0){
+				// if(p.getContHealth()>0){
 				contHealth--;
-				//p.decreasingHealth(1);
-				if(contHealth==0){
+				// p.decreasingHealth(1);
+				if (contHealth == 0) {
 					System.out.println("Orange died now");
 					setToEmpty();
 
 				}
 			}
-			else if (contHealth == 0) {
-			//else if (p.getContHealth()==0){
-				System.out.println("Orange died now");
-				setToEmpty();
-				
 
-			}
+		} else if (contHealth == 0) {
+			// else if (p.getContHealth()==0){
+			System.out.println("Orange died now");
+			setToEmpty();
 		}
 
 	}
@@ -173,6 +176,17 @@ public class Orange implements Plant {
 	this.plantName=null;
 	this.plantStage=null;
 	}
-
+	private void growup() {
+		// int RemainAge = fullAge-2 ;
+		int SeedlingDay = (fullAge - 2) / 2;
+		// int matureDay = RemainAge-SeedlingDay;
+		if (contAge == 2) {
+			this.plantStage = "Seedling";
+		} else if (contAge > 1 && contAge > SeedlingDay && contAge < fullAge) {
+			this.plantStage = "Mature";
+		} else if (contAge == fullAge||contAge>fullAge) {
+			this.plantStage = "dead";
+		}
+	}
 	
 }
