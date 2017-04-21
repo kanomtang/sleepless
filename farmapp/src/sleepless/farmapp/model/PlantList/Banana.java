@@ -51,6 +51,11 @@ public class Banana implements Plant {
 		    // if(p.getContHealth()>0){
 				contHealth--;
 				//p.decreasingHealth(1);
+				if(contHealth==0){
+					System.out.println("Banana died now");
+					setToEmpty();
+
+				}
 			}
 			else if (contHealth == 0) {
 			//else if (p.getContHealth()==0){
