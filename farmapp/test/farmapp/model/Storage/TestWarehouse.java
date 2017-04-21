@@ -1,4 +1,4 @@
-package sleepless.farmapp.model.Storage;
+package farmapp.model.Storage;
 
 import static org.junit.Assert.*;
 

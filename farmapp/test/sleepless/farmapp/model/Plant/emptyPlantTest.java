@@ -10,7 +10,7 @@ public class emptyPlantTest {
 	@Test
 	public void testgetEmptyplantName(){
 		TestemptyPlant t = new TestemptyPlant();
-		assertEquals("null",t.getPlantName());
+		assertEquals(null,t.getPlantName());
 	}
 	@Test
 	public void testviewEmptyplant(){

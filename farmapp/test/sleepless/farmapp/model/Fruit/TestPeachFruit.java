@@ -13,5 +13,9 @@ public class TestPeachFruit implements TestFruit {
 	public String getFruitName() {
 		return FruitName;
 	}
+	public void setFruitAmount(int fruitAmount) {
+		FruitAmount = fruitAmount;
+	}
+	
 }
 

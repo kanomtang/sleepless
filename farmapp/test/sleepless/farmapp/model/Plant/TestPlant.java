@@ -1,20 +1,19 @@
-package sleepless.farmapp.model.PlantList;
+package sleepless.farmapp.model.Plant;
 
 import java.util.ArrayList;
 
 import sleepless.farmapp.model.Fruit.Fruit;
+import sleepless.farmapp.model.Fruit.TestFruit;
 
-
-
-public interface Plant {
+public interface TestPlant {
 
 
 	
 	
-public  void viewPlant();
+	public  void viewPlant();
 	
 	public void waterPlant();
-	public void plantSleep(Plant p);
+	public void plantSleep(TestPlant p);
 	public String getPlantName();
 	public int getContPlantWater() ;
 	public int getContHealth() ;
@@ -23,7 +22,7 @@ public  void viewPlant();
 	public int getFullAge() ;
 	public int getFullPlantWater() ;
 	public int getFullHealth();
-	public ArrayList<Fruit> getPlantFruit() ;
+	public ArrayList<TestFruit> getPlantFruit() ;
 
 	public void setPlantName(String plantName);
 	public void setPlantStage(String plantStage) ;
@@ -33,12 +32,11 @@ public  void viewPlant();
 	public void setFullPlantWater(int fullPlantWater) ;
 	public void setContHealth(int contHealth) ;
 	public void setFullHealth(int fullHealth) ;
-	public void setPlantFruit(ArrayList<Fruit> plantFruit) ;
+	public void setPlantFruit(ArrayList<TestFruit> plantFruit) ;
 	
 	
 	public void increasingWater(int i);
 	public void decreasingWater(int i);
 	public void decreasingHealth(int i );
 	public void increasingage(int i);
-
 }

@@ -50,6 +50,7 @@ public class Prompt {
 		seedlist.add(new Peach());
 		// this line for create the inventory
 		
+		
 
 		int checkpoint = 0;
 		
