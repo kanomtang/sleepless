@@ -23,27 +23,28 @@ public class BananaTest {
 	
 	@Test
 	public void testBananaSleep(){
-		Banana t = new Banana();
-		assertEquals(5, t.getContPlantWater());
-		assertEquals(10, t.getContHealth());
-		t.plantSleep();
+		Banana b = new Banana();
+		b.plantSleep();
+		assertEquals(4, b.getContPlantWater());
+		assertEquals(10, b.getContHealth());
 		// expect actual
 		
 	}
 	
 	@Test
-	public void testBananaSleepwithoutwater8Days(){
-		Banana t = new Banana();
-		 assertEquals(5, t.getContPlantWater());
-		assertEquals(10, t.getContHealth());
-		for(int i = 0;i<8;i++){
-			t.plantSleep();
+	public void testBananaSleepwithoutwater4Days(){
+		Banana b = new Banana();
+		for(int i = 0;i<4;i++){
+			b.plantSleep();
 		}
+		assertEquals(1, b.getContPlantWater());
+		assertEquals(10, b.getContHealth());
+		
 		
 	}
 	
 	@Test
-	public void testBananaSleepwithoutWater13Days(){
+	public void testBananaSleepwithoutWater15Days(){
 		Banana b = new Banana();
 		for(int i = 0;i<15;i++){
 			b.plantSleep();
