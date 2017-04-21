@@ -23,7 +23,7 @@ public class Peach implements Plant {
 				"   Age:[seed | seedling | mature | dead] (" + plantStage + "  " + contAge + "//" + fullAge + " Days)");
 		System.out.println("   Health:(" + contHealth + "//" + fullHealth + ") (more hearths, "
 				+ "longer it can live without water)");
-		System.out.println("   Water:(" + contAge + "//" + fullAge + ") ");
+		System.out.println("   Water:(" + contPlantWater + "//" + fullPlantWater + ") ");
 		for (int i = 0; i < plantFruit.size(); i++) {
 			System.out.println("   Fruit:" + plantFruit.get(i));
 		}

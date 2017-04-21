@@ -21,7 +21,7 @@ public class emptyPlant implements Plant {
 				"   Age:[seed | seedling | mature | dead] (" + plantStage + "  " + contAge + "//" + fullAge + " Days)");
 		System.out.println("   Health:(" + contHealth + "//" + fullHealth + ") (more hearths, "
 				+ "longer it can live without water)");
-		System.out.println("   Water:(" + contAge + "//" + fullAge + ") ");
+		System.out.println("   Water:(" + contPlantWater + "//" + fullPlantWater + ") ");
 		System.out.println("");
 		for (int i = 0; i < plantFruit.size(); i++) {
 			System.out.println("   Fruit:" + plantFruit.get(i));
