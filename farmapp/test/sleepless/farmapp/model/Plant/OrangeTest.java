@@ -4,10 +4,6 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-
-import sleepless.farmapp.model.PlantList.Avocado;
-import sleepless.farmapp.model.PlantList.Banana;
-import sleepless.farmapp.model.PlantList.Papaya;
 import sleepless.farmapp.model.PlantList.Orange;
 
 public class OrangeTest {
@@ -40,7 +36,7 @@ public class OrangeTest {
 		for(int i = 0;i<4;i++){
 			o.plantSleep();
 		}
-		assertEquals(5, o.getContPlantWater());
+		assertEquals(6, o.getContPlantWater());
 		assertEquals(8, o.getContHealth());
 		
 		
