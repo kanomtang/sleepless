@@ -45,7 +45,7 @@ public class OrangeTest {
 	@Test
 	public void testOrangeSleepwithoutWater15Days(){
 		Orange o = new Orange();
-		for(int i = 0;i<18;i++){
+		for(int i = 0;i<17;i++){
 			o.plantSleep();
 		}
         assertEquals(0, o.getContPlantWater());

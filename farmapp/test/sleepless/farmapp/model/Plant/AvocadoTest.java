@@ -43,7 +43,7 @@ public class AvocadoTest {
 	@Test
 	public void testAvocadoSleepwithoutWater13Days(){
 		Avocado t = new Avocado();
-		for(int i = 0;i<18;i++){
+		for(int i = 0;i<17;i++){
 			t.plantSleep();
 		}
         assertEquals(0, t.getContPlantWater());

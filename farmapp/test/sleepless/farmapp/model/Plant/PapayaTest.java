@@ -43,7 +43,7 @@ public class PapayaTest {
 	@Test
 	public void testPapayaSleepwithoutWater7Days(){
 		Papaya p = new Papaya();
-		for(int i = 0;i<7;i++){
+		for(int i = 0;i<6;i++){
 			p.plantSleep();
 		}
         assertEquals(0, p.getContPlantWater());

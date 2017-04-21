@@ -46,7 +46,7 @@ public class BananaTest {
 	@Test
 	public void testBananaSleepwithoutWater15Days(){
 		Banana b = new Banana();
-		for(int i = 0;i<15;i++){
+		for(int i = 0;i<14;i++){
 			b.plantSleep();
 		}
         assertEquals(0, b.getContPlantWater());
