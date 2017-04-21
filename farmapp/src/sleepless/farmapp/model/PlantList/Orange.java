@@ -6,7 +6,7 @@ import sleepless.farmapp.model.Fruit.Fruit;
 import sleepless.farmapp.model.Fruit.OrangeFruit;
 
 public class Orange implements Plant {
-	private String plantName = "Avocado", plantStage = "Seed";
+	private String plantName = "Orange", plantStage = "Seed";
 	private int contAge = 20, fullAge = 20, contPlantWater = 10, fullPlantWater = 10, contHealth = 8, fullHealth = 8;
 	// private String[] plantFruit = new String [1];
 	// private String[] plantFruit ={"Avocado Fruit"};
@@ -54,7 +54,7 @@ public class Orange implements Plant {
 			}
 			else if (contHealth == 0) {
 			//else if (p.getContHealth()==0){
-				System.out.println("Avocado died now");
+				System.out.println("Orange died now");
 				setToEmpty();
 				
 
