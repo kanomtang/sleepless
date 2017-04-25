@@ -15,6 +15,9 @@ public class BananaFruit implements Fruit {
 	public void setFruitAmount(int fruitAmount) {
 		FruitAmount = fruitAmount;
 	}
-
+	public void addFruitAmount(int amount) {
+		// TODO Auto-generated method stub
+		this.FruitAmount+=amount;
+	}
 	
 }
