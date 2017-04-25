@@ -11,26 +11,25 @@ import sleepless.farmapp.model.PlantList.Papaya;
 import sleepless.farmapp.model.PlantList.Peach;
 import sleepless.farmapp.model.PlantList.Plant;
 import sleepless.farmapp.model.PlantList.emptyPlant;
+import sleepless.farmapp.model.Storage.SleeplesswareHouse;
 
 public class Prompt {
 
 	private static Scanner scan;
-	
-	public static void Initialize(){
+
+	public static void Initialize() {
 		System.out.println("Hello welcome to Sleepless Craxy planting game");
-		try{
+		try {
 			runTheProgram();
-		}
-		finally {
+		} finally {
 			System.out.println("Thx for playing our games glhf");
 		}
-		
+
 	}
 
 	public static void runTheProgram() {
 		// TODO Auto-generated method stub
 
-		// Plant[] plantlist= new Plant[4];
 		Plant beg1 = new emptyPlant();
 		Plant beg2 = new emptyPlant();
 		Plant beg3 = new emptyPlant();
@@ -41,7 +40,7 @@ public class Prompt {
 		plantlist.add(beg2);
 		plantlist.add(beg3);
 		plantlist.add(beg4);
-		// these line create for show all of plant type 
+		// these line create for show all of plant type
 		List<Plant> seedlist = new ArrayList<Plant>();
 		seedlist.add(new Avocado());
 		seedlist.add(new Banana());
@@ -49,13 +48,13 @@ public class Prompt {
 		seedlist.add(new Papaya());
 		seedlist.add(new Peach());
 		// this line for create the inventory
-		
-		
+
+		SleeplesswareHouse warehouse = new SleeplesswareHouse();
 
 		int checkpoint = 0;
-		
+
 		do {
-			
+
 			System.out.println("Choose your option Press the number and hit enter");
 			System.out.println("1:View Plants");
 			System.out.println("2:Plant a plant");
@@ -69,51 +68,60 @@ public class Prompt {
 			System.out.println("please choose option by pressing the number ");
 			int input = scan.nextInt();
 			if (input == 1) {
-				//option #1 ViewPlant
+				// option #1 ViewPlant
 				for (int i = 0; i < plantlist.size(); i++) {
 					plantlist.get(i).viewPlant();
 					;
 				}
 
 			} else if (input == 2) {
-				//option #2 plantSeed
+				// option #2 plantSeed
 				int countloop2 = 0;
-				for(Plant a : seedlist){
-					System.out.println(countloop2+" : "+a.getPlantName());
+				for (Plant a : seedlist) {
+					System.out.println(countloop2 + " : " + a.getPlantName());
 				}
 				int loop2input = scan.nextInt();
-				if(loop2input==0){
+				if (loop2input == 0) {
 					break;
-				}else{
+				} else {
 					for (int i = 0; i < plantlist.size(); i++) {
-					
-					if (plantlist.get(i) == null) {
-						setThePlant(plantlist.get(i), loop2input);
 
-						System.out.println("Plant is planted");
-						break;
-					}else {
-						System.out.println("No space for planting the seed");
+						if (plantlist.get(i) == null) {
+							setThePlant(plantlist.get(i), loop2input);
+
+							System.out.println("Plant is planted");
+							break;
+						} else {
+							System.out.println("No space for planting the seed");
+						}
 					}
 				}
-				}
-				
+
 			} else if (input == 3) {
-			//option #3 sleep	
-				
+				// option #3 sleep
+
 				for (int i = 0; i < plantlist.size(); i++) {
-					
+
 					plantlist.get(i).plantSleep();
 				}
 			} else if (input == 4) {
-				//Harvest Plant
+				// Harvest Plant
+				for (int i = 0; i < plantlist.size(); i++) {
+					if (plantlist.get(i).getPlantStage() != "Mature") {
+						System.out.println("No plant can harvest!");
+					} else {
+						for (Plant p : plantlist) {
+							harvest(p, warehouse);
+							p = new emptyPlant();
+						}
+						System.out.println("Plant are harvested!");
+					}
+				}
 
 			} else if (input == 5) {
-				//View Inventory
+				// View Inventory
 			} else if (input == 6) {
-				//Visit shop
-			}else if(input == 7){
-				//Sleep 1 
+				// Visit shop
 			}
 		} while (checkpoint != 8);
 	}
@@ -132,5 +140,12 @@ public class Prompt {
 		}
 		return p;
 	}
-	
+
+	private static void harvest(Plant p, SleeplesswareHouse warehouse) {
+		if (p.getPlantStage().equals("Mature")) {
+			warehouse.Collecting(p);
+			
+		}
+	}
+
 }
