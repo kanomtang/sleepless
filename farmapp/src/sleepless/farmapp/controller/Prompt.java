@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import sleepless.farmapp.model.Fruit.Fruit;
 import sleepless.farmapp.model.PlantList.Avocado;
 import sleepless.farmapp.model.PlantList.Banana;
 import sleepless.farmapp.model.PlantList.Orange;
@@ -16,7 +17,7 @@ import sleepless.farmapp.model.Storage.SleeplesswareHouse;
 public class Prompt {
 
 	private static Scanner scan;
-
+	
 	public static void Initialize() {
 		System.out.println("Hello welcome to Sleepless Craxy planting game");
 		try {
@@ -50,7 +51,9 @@ public class Prompt {
 		// this line for create the inventory
 
 		SleeplesswareHouse warehouse = new SleeplesswareHouse();
-
+		
+		int gameDays=0;
+		
 		int checkpoint = 0;
 
 		do {
@@ -99,11 +102,14 @@ public class Prompt {
 
 			} else if (input == 3) {
 				// option #3 sleep
-
+		
 				for (int i = 0; i < plantlist.size(); i++) {
 
 					plantlist.get(i).plantSleep();
 				}
+				gameDays++;
+				System.out.println("Days "+gameDays);
+				
 			} else if (input == 4) {
 				// Harvest Plant
 				for (int i = 0; i < plantlist.size(); i++) {
@@ -120,6 +126,12 @@ public class Prompt {
 
 			} else if (input == 5) {
 				// View Inventory
+				
+				ArrayList<Fruit> FruitInven = warehouse.getFruitlist();
+				System.out.println("The list this Inventory");
+				for(Fruit a : FruitInven ){
+					System.out.println("Fruit Name"+a.getFruitName()+"  :  "+a.getFruitAmount());
+				}
 			} else if (input == 6) {
 				// Visit shop
 			}

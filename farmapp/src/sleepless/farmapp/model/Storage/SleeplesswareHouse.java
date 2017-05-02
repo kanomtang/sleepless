@@ -17,7 +17,7 @@ import sleepless.farmapp.model.PlantList.Plant;
 
 public class SleeplesswareHouse {
 
-	ArrayList<Fruit> Fruitlist = new ArrayList<Fruit>();
+	private ArrayList<Fruit> Fruitlist = new ArrayList<Fruit>();
 
 
 	public SleeplesswareHouse(){
@@ -32,7 +32,10 @@ public class SleeplesswareHouse {
 			a.setFruitAmount(0);
 		}
 	}
-    public void Collecting(Plant p){
+    public ArrayList<Fruit> getFruitlist() {
+		return Fruitlist;
+	}
+	public void Collecting(Plant p){
 		
     	//if p.get fruit is equal in fruitlist they will incrasing 
     	for(int i = 0 ;i<p.getPlantFruit().size();i++){
