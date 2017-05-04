@@ -3,8 +3,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import sleepless.farmapp.model.PlantList.Avocado;
-import sleepless.farmapp.model.PlantList.Banana;
+
 import sleepless.farmapp.model.PlantList.Papaya;
 public class PapayaTest {
 
