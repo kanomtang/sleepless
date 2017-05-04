@@ -17,7 +17,7 @@ import sleepless.farmapp.model.Storage.SleeplesswareHouse;
 public class Prompt {
 
 	private static Scanner scan;
-	
+
 	public static void Initialize() {
 		System.out.println("Hello welcome to Sleepless Craxy planting game");
 		try {
@@ -51,9 +51,9 @@ public class Prompt {
 		// this line for create the inventory
 
 		SleeplesswareHouse warehouse = new SleeplesswareHouse();
-		
-		int gameDays=0;
-		
+
+		int gameDays = 0;
+
 		int checkpoint = 0;
 
 		do {
@@ -84,14 +84,15 @@ public class Prompt {
 					System.out.println(countloop2 + " : " + a.getPlantName());
 				}
 				int loop2input = scan.nextInt();
-				if (loop2input == 0) {
+				if (loop2input == 4) {
 					break;
 				} else {
 					for (int i = 0; i < plantlist.size(); i++) {
 
 						if (plantlist.get(i) == null) {
-							setThePlant(plantlist.get(i), loop2input);
-
+							//setThePlant(plantlist.get(i), loop2input);
+							
+							plantlist.set(i, seedlist.get(loop2input));
 							System.out.println("Plant is planted");
 							break;
 						} else {
@@ -102,35 +103,32 @@ public class Prompt {
 
 			} else if (input == 3) {
 				// option #3 sleep
-		
+
 				for (int i = 0; i < plantlist.size(); i++) {
 
 					plantlist.get(i).plantSleep();
 				}
 				gameDays++;
-				System.out.println("Days "+gameDays);
-				
+				System.out.println("Days " + gameDays);
+
 			} else if (input == 4) {
-				// Harvest Plant
 				for (int i = 0; i < plantlist.size(); i++) {
-					if (plantlist.get(i).getPlantStage() != "Mature") {
-						System.out.println("No plant can harvest!");
+					if (plantlist.get(i).getPlantStage() == "Mature") {
+						harvest(plantlist.get(i), warehouse);
+						plantlist.get(i).setToEmpty();
+						System.out.println("Beg :" + i + " are harvested!");
 					} else {
-						for (Plant p : plantlist) {
-							harvest(p, warehouse);
-							p = new emptyPlant();
-						}
-						System.out.println("Plant are harvested!");
+						System.out.println("Beg :" + i + " can't harvested!");
 					}
 				}
 
 			} else if (input == 5) {
 				// View Inventory
-				
+
 				ArrayList<Fruit> FruitInven = warehouse.getFruitlist();
 				System.out.println("The list this Inventory");
-				for(Fruit a : FruitInven ){
-					System.out.println("Fruit Name"+a.getFruitName()+"  :  "+a.getFruitAmount());
+				for (Fruit a : FruitInven) {
+					System.out.println("Fruit Name" + a.getFruitName() + "  :  " + a.getFruitAmount());
 				}
 			} else if (input == 6) {
 				// Visit shop
@@ -138,25 +136,25 @@ public class Prompt {
 		} while (checkpoint != 8);
 	}
 
-	private static Plant setThePlant(Plant p, int number) {
-		if (number == 1) {
-			p = new Avocado();
-		} else if (number == 2) {
-			p = new Banana();
-		} else if (number == 3) {
-			p = new Orange();
-		} else if (number == 4) {
-			p = new Papaya();
-		} else if (number == 5) {
-			p = new Peach();
-		}
-		return p;
-	}
+//	private static Plant setThePlant(Plant p, int number) {
+//		if (number == 1) {
+//			p = new Avocado();
+//		} else if (number == 2) {
+//			p = new Banana();
+//		} else if (number == 3) {
+//			p = new Orange();
+//		} else if (number == 4) {
+//			p = new Papaya();
+//		} else if (number == 5) {
+//			p = new Peach();
+//		}
+//		return p;
+//	}
 
 	private static void harvest(Plant p, SleeplesswareHouse warehouse) {
 		if (p.getPlantStage().equals("Mature")) {
 			warehouse.Collecting(p);
-			
+
 		}
 	}
 

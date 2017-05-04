@@ -1,6 +1,7 @@
 package sleepless.farmapp.model.PlantList;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 import sleepless.farmapp.model.Fruit.Fruit;
 import sleepless.farmapp.model.Fruit.PeachFruit;
@@ -34,12 +35,13 @@ public class Peach implements Plant {
 		// TODO Auto-generated method stub
 
 	}
+
 	public void plantSleep() {
 		// TODO Auto-generated method stub
 
 		// p.increasingage(1);
 		contAge++;
-		 growup();
+		growup();
 		if (contAge == fullAge) {
 			System.out.println("Peach died now");
 			setToEmpty();
@@ -82,8 +84,6 @@ public class Peach implements Plant {
 		return contHealth;
 	}
 
-	
-	
 	public String getPlantStage() {
 		return plantStage;
 	}
@@ -104,10 +104,12 @@ public class Peach implements Plant {
 		return fullHealth;
 	}
 
-	public ArrayList<Fruit> getPlantFruit() {
-		return plantFruit;
+	public Fruit getPlantFruit() {
+
+		Random R = new Random();
+		Fruit ResultFruit = plantFruit.get(R.nextInt(plantFruit.size()));
+		return ResultFruit;
 	}
-	
 
 	public void setPlantName(String plantName) {
 		this.plantName = plantName;
@@ -147,33 +149,34 @@ public class Peach implements Plant {
 
 	public void increasingWater(int i) {
 		// TODO Auto-generated method stub
-		this.contPlantWater+=i;
+		this.contPlantWater += i;
 	}
 
 	public void decreasingWater(int i) {
 		// TODO Auto-generated method stub
-		this.contPlantWater-=i;
+		this.contPlantWater -= i;
 	}
 
 	public void decreasingHealth(int i) {
-		this.contHealth -=i;
-		
+		this.contHealth -= i;
+
 	}
 
 	public void increasingage(int agepara) {
 		// TODO Auto-generated method stub
-		this.contAge+=agepara;
-		
+		this.contAge += agepara;
+
 	}
-	private  void setToEmpty(){
-	this.contAge=0;
-	this.contHealth=0;
-	this.contPlantWater=0;
-	this.fullAge=0;
-	this.fullHealth=0;
-	this.fullPlantWater=0;
-	this.plantName=null;
-	this.plantStage=null;
+
+	public void setToEmpty() {
+		this.contAge = 0;
+		this.contHealth = 0;
+		this.contPlantWater = 0;
+		this.fullAge = 0;
+		this.fullHealth = 0;
+		this.fullPlantWater = 0;
+		this.plantName = null;
+		this.plantStage = null;
 	}
 
 	private void growup() {
@@ -184,9 +187,9 @@ public class Peach implements Plant {
 			this.plantStage = "Seedling";
 		} else if (contAge > 1 && contAge > SeedlingDay && contAge < fullAge) {
 			this.plantStage = "Mature";
-		} else if (contAge == fullAge||contAge>fullAge) {
+		} else if (contAge == fullAge || contAge > fullAge) {
 			this.plantStage = "dead";
 		}
 	}
-	
+
 }

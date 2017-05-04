@@ -36,15 +36,15 @@ public class SleeplesswareHouse {
 		return Fruitlist;
 	}
 	public void Collecting(Plant p){
-		
-    	//if p.get fruit is equal in fruitlist they will incrasing 
-    	for(int i = 0 ;i<p.getPlantFruit().size();i++){
-    	for(Fruit a:Fruitlist){
-    		if(a.getFruitName().equals(p.getPlantFruit().get(i).getFruitName())){
-    			a.setFruitAmount(p.getPlantFruit().get(i).getFruitAmount());
-    			
-    		}
-    	}
-		}
+//		
+//    	//if p.get fruit is equal in fruitlist they will incrasing 
+//    	for(int i = 0 ;i<p.getPlantFruit().size();i++){
+//    	for(Fruit a:Fruitlist){
+//    		if(a.getFruitName().equals(p.getPlantFruit().get(i).getFruitName())){
+//    			a.setFruitAmount(p.getPlantFruit().get(i).getFruitAmount());
+//    			
+//    		}
+//    	}
+//		}
 	}
 }

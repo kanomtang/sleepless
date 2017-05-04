@@ -4,6 +4,7 @@ import sleepless.farmapp.model.Fruit.*;
 
 import java.awt.List;
 import java.util.ArrayList;
+import java.util.Random;
 
 import sleepless.farmapp.model.Fruit.*;
 
@@ -15,6 +16,7 @@ public class Avocado implements Plant {
 
 	public Avocado() {
 		plantFruit.add(new AvocadoFruit());
+		plantFruit.add(new OrangeFruit());
 	}
 
 	public void viewPlant() {
@@ -106,8 +108,11 @@ public class Avocado implements Plant {
 		return fullHealth;
 	}
 
-	public ArrayList<Fruit> getPlantFruit() {
-		return plantFruit;
+	public Fruit getPlantFruit() {
+		
+		Random R = new Random();
+		Fruit ResultFruit = plantFruit.get(R.nextInt(plantFruit.size()));
+		return ResultFruit;
 	}
 
 	public void setPlantName(String plantName) {
@@ -166,18 +171,9 @@ public class Avocado implements Plant {
 		this.contAge += agepara;
 
 	}
-	// private static void setToEmpty(Plant p){
-	// p.setContAge(0);
-	// p.setContHealth(0);
-	// p.setContPlantWater(0);
-	// p.setFullAge(0);
-	// p.setFullHealth(0);
-	// p.setFullPlantWater(0);
-	// p.setPlantFruit(null);
-	// p.setPlantName(null);
-	// p.setPlantStage(null);
 
-	private void setToEmpty() {
+
+	public void setToEmpty() {
 		this.contAge = 0;
 		this.contHealth = 0;
 		this.contPlantWater = 0;

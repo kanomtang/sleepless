@@ -1,6 +1,7 @@
 package sleepless.farmapp.model.PlantList;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 import sleepless.farmapp.model.Fruit.BananaFruit;
 import sleepless.farmapp.model.Fruit.Fruit;
@@ -8,8 +9,7 @@ import sleepless.farmapp.model.Fruit.Fruit;
 public class Banana implements Plant {
 	private String plantName = "Banana", plantStage = "Seed";
 	private int contAge = 1, fullAge = 12, contPlantWater = 5, fullPlantWater = 5, contHealth = 10, fullHealth = 10;
-	// private String[] plantFruit = new String [1];
-	// private String[] plantFruit ={"Avocado Fruit"};
+	
 	private ArrayList<Fruit> plantFruit = new ArrayList<Fruit>();
 
 	public Banana() {
@@ -104,10 +104,12 @@ public class Banana implements Plant {
 		return fullHealth;
 	}
 
-	public ArrayList<Fruit> getPlantFruit() {
-		return plantFruit;
+public Fruit getPlantFruit() {
+		
+		Random R = new Random();
+		Fruit ResultFruit = plantFruit.get(R.nextInt(plantFruit.size()));
+		return ResultFruit;
 	}
-	
 
 	public void setPlantName(String plantName) {
 		this.plantName = plantName;
@@ -165,7 +167,7 @@ public class Banana implements Plant {
 		this.contAge+=agepara;
 		
 	}
-	private  void setToEmpty(){
+	public  void setToEmpty(){
 	this.contAge=0;
 	this.contHealth=0;
 	this.contPlantWater=0;

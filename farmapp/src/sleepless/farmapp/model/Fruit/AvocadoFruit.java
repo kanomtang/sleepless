@@ -3,6 +3,9 @@ package sleepless.farmapp.model.Fruit;
 public class AvocadoFruit implements Fruit {
 	private String FruitName="Avocado Fruit";
 	private int FruitAmount =1;
+	private String RareLevel = "Common" ;
+	private int zeny = 10;
+	
 	public String getFruitName() {
 		return FruitName;
 	}
@@ -19,6 +22,13 @@ public class AvocadoFruit implements Fruit {
 		// TODO Auto-generated method stub
 		this.FruitAmount+=amount;
 	}
+	public String getRareLevel() {
+		return RareLevel;
+	}
+	public int getZeny() {
+		return zeny;
+	}
+	
 	
 	
 }

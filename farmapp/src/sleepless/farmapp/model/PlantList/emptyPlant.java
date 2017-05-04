@@ -1,19 +1,17 @@
 package sleepless.farmapp.model.PlantList;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 import sleepless.farmapp.model.Fruit.Fruit;
 
 public class emptyPlant implements Plant {
 
-	private String plantName = "null",plantStage="Seed";
-	private int contAge=0 ,fullAge=0,contPlantWater=0,fullPlantWater=0,contHealth=0,fullHealth=0;
-	//private String[] plantFruit = new String [1];
+	private String plantName = "null", plantStage = "Seed";
+	private int contAge = 0, fullAge = 0, contPlantWater = 0, fullPlantWater = 0, contHealth = 0, fullHealth = 0;
+	// private String[] plantFruit = new String [1];
 	private ArrayList<Fruit> plantFruit = new ArrayList<Fruit>();
-		
-	
-	
-	
+
 	public void viewPlant() {
 		// TODO Auto-generated method stub
 		System.out.println(plantName);
@@ -37,26 +35,24 @@ public class emptyPlant implements Plant {
 
 	public void plantSleep() {
 		// TODO Auto-generated method stub
-		
-		//p.increasingage(1);
+
+		// p.increasingage(1);
 		contAge++;
 		if (contPlantWater != 0) {
-		//if(p.getContPlantWater()!=0){
+			// if(p.getContPlantWater()!=0){
 			contPlantWater--;
-			//p.decreasingWater(1);
+			// p.decreasingWater(1);
 		}
 		if (contPlantWater == 0) {
-		//if(p.getContPlantWater()==0){
+			// if(p.getContPlantWater()==0){
 			if (contHealth > 0) {
-		    // if(p.getContHealth()>0){
+				// if(p.getContHealth()>0){
 				contHealth--;
-				//p.decreasingHealth(1);
-			}
-			else if (contHealth == 0) {
-			//else if (p.getContHealth()==0){
+				// p.decreasingHealth(1);
+			} else if (contHealth == 0) {
+				// else if (p.getContHealth()==0){
 				System.out.println("Avocado died now");
 				setToEmpty();
-				
 
 			}
 		}
@@ -75,8 +71,6 @@ public class emptyPlant implements Plant {
 		return contHealth;
 	}
 
-	
-	
 	public String getPlantStage() {
 		return plantStage;
 	}
@@ -97,10 +91,12 @@ public class emptyPlant implements Plant {
 		return fullHealth;
 	}
 
-	public ArrayList<Fruit> getPlantFruit() {
-		return plantFruit;
+	public Fruit getPlantFruit() {
+
+		Random R = new Random();
+		Fruit ResultFruit = plantFruit.get(R.nextInt(plantFruit.size()));
+		return ResultFruit;
 	}
-	
 
 	public void setPlantName(String plantName) {
 		this.plantName = plantName;
@@ -140,35 +136,34 @@ public class emptyPlant implements Plant {
 
 	public void increasingWater(int i) {
 		// TODO Auto-generated method stub
-		this.contPlantWater+=i;
+		this.contPlantWater += i;
 	}
 
 	public void decreasingWater(int i) {
 		// TODO Auto-generated method stub
-		this.contPlantWater-=i;
+		this.contPlantWater -= i;
 	}
 
 	public void decreasingHealth(int i) {
-		this.contHealth -=i;
-		
+		this.contHealth -= i;
+
 	}
 
 	public void increasingage(int agepara) {
 		// TODO Auto-generated method stub
-		this.contAge+=agepara;
-		
-	}
-	private  void setToEmpty(){
-	this.contAge=0;
-	this.contHealth=0;
-	this.contPlantWater=0;
-	this.fullAge=0;
-	this.fullHealth=0;
-	this.fullPlantWater=0;
-	this.plantName=null;
-	this.plantStage=null;
+		this.contAge += agepara;
+
 	}
 
-	
+	public void setToEmpty() {
+		this.contAge = 0;
+		this.contHealth = 0;
+		this.contPlantWater = 0;
+		this.fullAge = 0;
+		this.fullHealth = 0;
+		this.fullPlantWater = 0;
+		this.plantName = null;
+		this.plantStage = null;
+	}
 
 }

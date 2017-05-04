@@ -23,7 +23,7 @@ public  void viewPlant();
 	public int getFullAge() ;
 	public int getFullPlantWater() ;
 	public int getFullHealth();
-	public ArrayList<Fruit> getPlantFruit() ;
+	public Fruit getPlantFruit() ;
 
 	public void setPlantName(String plantName);
 	public void setPlantStage(String plantStage) ;
@@ -34,7 +34,8 @@ public  void viewPlant();
 	public void setContHealth(int contHealth) ;
 	public void setFullHealth(int fullHealth) ;
 	public void setPlantFruit(ArrayList<Fruit> plantFruit) ;
-	
+	public void setToEmpty();
+
 	
 	public void increasingWater(int i);
 	public void decreasingWater(int i);
