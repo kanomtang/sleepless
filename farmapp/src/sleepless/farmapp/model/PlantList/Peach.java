@@ -142,30 +142,30 @@ public class Peach implements Plant {
 		this.fullHealth = fullHealth;
 	}
 
-	public void setPlantFruit(ArrayList<Fruit> plantFruit) {
-		this.plantFruit = plantFruit;
-	}
+//	public void setPlantFruit(ArrayList<Fruit> plantFruit) {
+//		this.plantFruit = plantFruit;
+//	}
 
-	public void increasingWater(int i) {
-		// TODO Auto-generated method stub
-		this.contPlantWater += i;
-	}
-
-	public void decreasingWater(int i) {
-		// TODO Auto-generated method stub
-		this.contPlantWater -= i;
-	}
-
-	public void decreasingHealth(int i) {
-		this.contHealth -= i;
-
-	}
-
-	public void increasingage(int agepara) {
-		// TODO Auto-generated method stub
-		this.contAge += agepara;
-
-	}
+//	public void increasingWater(int i) {
+//		// TODO Auto-generated method stub
+//		this.contPlantWater += i;
+//	}
+//
+//	public void decreasingWater(int i) {
+//		// TODO Auto-generated method stub
+//		this.contPlantWater -= i;
+//	}
+//
+//	public void decreasingHealth(int i) {
+//		this.contHealth -= i;
+//
+//	}
+//
+//	public void increasingage(int agepara) {
+//		// TODO Auto-generated method stub
+//		this.contAge += agepara;
+//
+//	}
 	public int getZeny() {
 		return zeny;
 	}
