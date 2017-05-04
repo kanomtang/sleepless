@@ -35,7 +35,9 @@ public  void viewPlant();
 	public void setFullHealth(int fullHealth) ;
 	public void setPlantFruit(ArrayList<Fruit> plantFruit) ;
 	public void setToEmpty();
-
+	public int getZeny();
+	public void setZeny(int zeny) ;
+	
 	
 	public void increasingWater(int i);
 	public void decreasingWater(int i);

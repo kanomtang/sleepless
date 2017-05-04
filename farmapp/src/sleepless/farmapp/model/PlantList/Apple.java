@@ -11,7 +11,7 @@ public class Apple implements Plant {
 	private int contAge = 1, fullAge = 12, contPlantWater = 5, fullPlantWater = 7, contHealth = 10, fullHealth = 10;
 	
 	private ArrayList<Fruit> plantFruit = new ArrayList<Fruit>();
-
+	private int zeny = 20;
 	public Apple() {
 		plantFruit.add(new AppleFruit());
 	}
@@ -167,6 +167,13 @@ public Fruit getPlantFruit() {
 		this.contAge+=agepara;
 		
 	}
+	public int getZeny() {
+		return zeny;
+	}
+	public void setZeny(int zeny) {
+		this.zeny = zeny;
+	}
+	
 	public  void setToEmpty(){
 	this.contAge=0;
 	this.contHealth=0;

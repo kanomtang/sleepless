@@ -9,8 +9,7 @@ import sleepless.farmapp.model.Fruit.OrangeFruit;
 public class Orange implements Plant {
 	private String plantName = "Orange", plantStage = "Seed";
 	private int contAge = 1, fullAge = 20, contPlantWater = 10, fullPlantWater = 10, contHealth = 8, fullHealth = 8;
-	// private String[] plantFruit = new String [1];
-	// private String[] plantFruit ={"Avocado Fruit"};
+	private int zeny = 10;
 	private ArrayList<Fruit> plantFruit = new ArrayList<Fruit>();
 
 	public Orange() {
@@ -166,6 +165,12 @@ public class Orange implements Plant {
 		// TODO Auto-generated method stub
 		this.contAge += agepara;
 
+	}
+	public int getZeny() {
+		return zeny;
+	}
+	public void setZeny(int zeny) {
+		this.zeny = zeny;
 	}
 
 	public void setToEmpty() {

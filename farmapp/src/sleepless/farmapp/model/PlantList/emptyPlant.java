@@ -11,7 +11,7 @@ public class emptyPlant implements Plant {
 	private int contAge = 0, fullAge = 0, contPlantWater = 0, fullPlantWater = 0, contHealth = 0, fullHealth = 0;
 	// private String[] plantFruit = new String [1];
 	private ArrayList<Fruit> plantFruit = new ArrayList<Fruit>();
-
+	private int zeny = 0;
 	public void viewPlant() {
 		// TODO Auto-generated method stub
 		System.out.println(plantName);
@@ -154,7 +154,12 @@ public class emptyPlant implements Plant {
 		this.contAge += agepara;
 
 	}
-
+	public int getZeny() {
+		return zeny;
+	}
+	public void setZeny(int zeny) {
+		this.zeny = zeny;
+	}
 	public void setToEmpty() {
 		this.contAge = 0;
 		this.contHealth = 0;

@@ -10,8 +10,7 @@ public class Papaya implements Plant {
 
 	private String plantName = "Papaya", plantStage = "Seed";
 	private int contAge = 1, fullAge = 7, contPlantWater = 3, fullPlantWater = 3, contHealth = 4, fullHealth = 4;
-	// private String[] plantFruit = new String [1];
-	// private String[] plantFruit ={"Avocado Fruit"};
+	private int zeny = 10;
 	private ArrayList<Fruit> plantFruit = new ArrayList<Fruit>();
 
 	public Papaya() {
@@ -167,6 +166,12 @@ public class Papaya implements Plant {
 		// TODO Auto-generated method stub
 		this.contAge += agepara;
 
+	}
+	public int getZeny() {
+		return zeny;
+	}
+	public void setZeny(int zeny) {
+		this.zeny = zeny;
 	}
 
 	public void setToEmpty() {

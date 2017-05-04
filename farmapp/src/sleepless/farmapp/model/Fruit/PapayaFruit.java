@@ -28,4 +28,7 @@ public class PapayaFruit implements Fruit {
 	public int getZeny() {
 		return zeny;
 	}
+	public void setZeny(int zeny) {
+		this.zeny = zeny;
+	}
 }

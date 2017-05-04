@@ -10,5 +10,5 @@ public void addFruitAmount(int amount);
 public String getRareLevel();
 
 public int getZeny();
-
+public void setZeny(int zeny);
 }

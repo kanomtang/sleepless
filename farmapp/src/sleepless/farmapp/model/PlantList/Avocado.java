@@ -11,7 +11,7 @@ import sleepless.farmapp.model.Fruit.*;
 public class Avocado implements Plant {
 	private String plantName = "Avocado", plantStage = "Seed";
 	private int contAge = 1, fullAge = 10, contPlantWater = 8, fullPlantWater = 8, contHealth = 10, fullHealth = 10;
-
+	private int zeny = 10;
 	private ArrayList<Fruit> plantFruit = new ArrayList<Fruit>();
 
 	public Avocado() {
@@ -171,7 +171,12 @@ public class Avocado implements Plant {
 		this.contAge += agepara;
 
 	}
-
+	public int getZeny() {
+		return zeny;
+	}
+	public void setZeny(int zeny) {
+		this.zeny = zeny;
+	}
 
 	public void setToEmpty() {
 		this.contAge = 0;

@@ -12,6 +12,7 @@ import sleepless.farmapp.model.PlantList.Papaya;
 import sleepless.farmapp.model.PlantList.Peach;
 import sleepless.farmapp.model.PlantList.Plant;
 import sleepless.farmapp.model.PlantList.emptyPlant;
+import sleepless.farmapp.model.Shop.TBKShop;
 import sleepless.farmapp.model.Storage.SleeplesswareHouse;
 
 public class Prompt {
@@ -51,13 +52,13 @@ public class Prompt {
 		// this line for create the inventory
 
 		SleeplesswareHouse warehouse = new SleeplesswareHouse();
-
+		TBKShop tbkshop = new TBKShop();
 		int gameDays = 0;
 
 		int checkpoint = 0;
 
 		do {
-			System.out.println("Days :"+gameDays +" Money :" +warehouse.getMoney() + " Zeny");
+			System.out.println("Days :" + gameDays + " Money :" + warehouse.getMoney() + " Zeny");
 			System.out.println("Choose your option Press the number and hit enter");
 			System.out.println("1:View Plants");
 			System.out.println("2:Plant a plant");
@@ -81,20 +82,21 @@ public class Prompt {
 			} else if (input == 2) {
 				// option #2 plantSeed
 				int countloop2 = 0;
-				
+
 				for (Plant a : seedlist) {
 					System.out.println(countloop2 + " : " + a.getPlantName());
+					countloop2++;
 				}
 				int loop2input = scan.nextInt();
-				System.out.println("Press 4 and hit enter for back to main menu");
-				if (loop2input == 4) {
+				System.out.println("Press 10 and hit enter for back to main menu");
+				if (loop2input == 10) {
 					break;
 				} else {
 					for (int i = 0; i < plantlist.size(); i++) {
 
-						if (plantlist.get(i) == null) {
-							//setThePlant(plantlist.get(i), loop2input);
-							
+						if (plantlist.get(i).getPlantName().equals("null")) {
+							// setThePlant(plantlist.get(i), loop2input);
+
 							plantlist.set(i, seedlist.get(loop2input));
 							System.out.println("Plant is planted");
 							break;
@@ -115,7 +117,7 @@ public class Prompt {
 				System.out.println("Days " + gameDays);
 
 			} else if (input == 4) {
-				//harvest
+				// harvest
 				for (int i = 0; i < plantlist.size(); i++) {
 					if (plantlist.get(i).getPlantStage() == "Mature") {
 						harvest(plantlist.get(i), warehouse);
@@ -136,13 +138,37 @@ public class Prompt {
 				}
 			} else if (input == 6) {
 				// Visit shop
-			}else if (input == 7){
+				int i = 0;
+				System.out.println("Your money :" + warehouse.getMoney() + " Zeny");
+				for (Plant a : tbkshop.getSeedlistStore()) {
+					System.out.println(i + ": Name :" + a.getPlantName() + " Price :" + a.getZeny() + " Zeny");
+					i++;
+				}
+				System.out.println("Press 9 and hit enter for back to main menu");
+				int loop6input = scan.nextInt();
+
+				if (loop6input == 9) {
+					break;
+				} else {
+					if (tbkshop.getSeedlistStore().get(loop6input).getZeny() - warehouse.getMoney() >= 0) {
+						seedlist.add(tbkshop.getSeedlistStore().get(loop6input));
+						tbkshop.getSeedlistStore().remove(loop6input);
+						System.out.println("Buy successful");
+						break;
+					} else {
+						System.out.println("Zeny not enough");
+						break;
+					}
+				}
+
+			} else if (input == 7) {
 				// Sell Fruit
+				System.out.println("Before selling the fruit "+warehouse.getMoney()+" Zeny");
+				warehouse.SellFruit();
+				System.out.println("After selling the fruit "+warehouse.getMoney()+" Zeny");
 			}
 		} while (checkpoint != 8);
 	}
-
-
 
 	private static void harvest(Plant p, SleeplesswareHouse warehouse) {
 		if (p.getPlantStage().equals("Mature")) {

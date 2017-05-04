@@ -48,5 +48,10 @@ public class SleeplesswareHouse {
 	public int getMoney() {
 		return Money;
 	}
+	public void SellFruit(){
+		for(Fruit a : Fruitlist){
+			Money+=a.getZeny();
+		}
+	}
 
 }
