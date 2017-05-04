@@ -57,14 +57,15 @@ public class Prompt {
 		int checkpoint = 0;
 
 		do {
-
+			System.out.println("Days :"+gameDays +" Money :" +warehouse.getMoney() + " Zeny");
 			System.out.println("Choose your option Press the number and hit enter");
 			System.out.println("1:View Plants");
 			System.out.println("2:Plant a plant");
 			System.out.println("3:Sleep");
-			System.out.println();
-			System.out.println();
-			System.out.println();
+			System.out.println("4:Havest");
+			System.out.println("5:View inventory");
+			System.out.println("6:Visit shop");
+			System.out.println("7:Sell fruit");
 			System.out.println("8:Exit game ");
 
 			scan = new Scanner(System.in);
@@ -80,10 +81,12 @@ public class Prompt {
 			} else if (input == 2) {
 				// option #2 plantSeed
 				int countloop2 = 0;
+				
 				for (Plant a : seedlist) {
 					System.out.println(countloop2 + " : " + a.getPlantName());
 				}
 				int loop2input = scan.nextInt();
+				System.out.println("Press 4 and hit enter for back to main menu");
 				if (loop2input == 4) {
 					break;
 				} else {
@@ -112,6 +115,7 @@ public class Prompt {
 				System.out.println("Days " + gameDays);
 
 			} else if (input == 4) {
+				//harvest
 				for (int i = 0; i < plantlist.size(); i++) {
 					if (plantlist.get(i).getPlantStage() == "Mature") {
 						harvest(plantlist.get(i), warehouse);
@@ -132,24 +136,13 @@ public class Prompt {
 				}
 			} else if (input == 6) {
 				// Visit shop
+			}else if (input == 7){
+				// Sell Fruit
 			}
 		} while (checkpoint != 8);
 	}
 
-//	private static Plant setThePlant(Plant p, int number) {
-//		if (number == 1) {
-//			p = new Avocado();
-//		} else if (number == 2) {
-//			p = new Banana();
-//		} else if (number == 3) {
-//			p = new Orange();
-//		} else if (number == 4) {
-//			p = new Papaya();
-//		} else if (number == 5) {
-//			p = new Peach();
-//		}
-//		return p;
-//	}
+
 
 	private static void harvest(Plant p, SleeplesswareHouse warehouse) {
 		if (p.getPlantStage().equals("Mature")) {

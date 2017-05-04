@@ -19,7 +19,8 @@ public class SleeplesswareHouse {
 
 	private ArrayList<Fruit> Fruitlist = new ArrayList<Fruit>();
 
-
+	private int Money=0;
+	
 	public SleeplesswareHouse(){
 		Fruitlist.add(new AvocadoFruit());
 		Fruitlist.add(new BananaFruit());
@@ -36,15 +37,16 @@ public class SleeplesswareHouse {
 		return Fruitlist;
 	}
 	public void Collecting(Plant p){
-//		
-//    	//if p.get fruit is equal in fruitlist they will incrasing 
-//    	for(int i = 0 ;i<p.getPlantFruit().size();i++){
-//    	for(Fruit a:Fruitlist){
-//    		if(a.getFruitName().equals(p.getPlantFruit().get(i).getFruitName())){
-//    			a.setFruitAmount(p.getPlantFruit().get(i).getFruitAmount());
-//    			
-//    		}
-//    	}
-//		}
+
+		for(Fruit a : Fruitlist){
+			if(a.getFruitName().equals(p.getPlantFruit())){
+				//a.setFruitAmount(p.getFruitAmount);
+				  a.addFruitAmount(p.getPlantFruit().getFruitAmount());
+			}
+		}
 	}
+	public int getMoney() {
+		return Money;
+	}
+
 }
