@@ -24,7 +24,7 @@ public class MangosteenTest {
 	public void testMangosteenSleep(){
 		Mangosteen m = new Mangosteen();
 		m.plantSleep();
-		assertEquals(3, m.getContPlantWater());
+		assertEquals(7, m.getContPlantWater());
 		assertEquals(10, m.getContHealth());
 		// expect actual
 		
@@ -36,7 +36,7 @@ public class MangosteenTest {
 		for(int i = 0;i<4;i++){
 			m.plantSleep();
 		}
-		assertEquals(0, m.getContPlantWater());
+		assertEquals(4, m.getContPlantWater());
 		assertEquals(10, m.getContHealth());
 		
 		

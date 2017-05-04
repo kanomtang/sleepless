@@ -10,7 +10,7 @@ import sleepless.farmapp.model.Fruit.Fruit;
 
 public class Mangosteen implements Plant {
 	private String plantName = "Mangosteen", plantStage = "Seed";
-	private int contAge = 1, fullAge = 7, contPlantWater = 4, fullPlantWater = 8, contHealth = 10, fullHealth = 10;
+	private int contAge = 1, fullAge = 7, contPlantWater = 8, fullPlantWater = 8, contHealth = 10, fullHealth = 10;
 	private int zeny = 20;
 	private ArrayList<Fruit> plantFruit = new ArrayList<Fruit>();
 
