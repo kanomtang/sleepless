@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Random;
 
 import sleepless.farmapp.model.Fruit.MangoFruit;
+import sleepless.farmapp.model.Fruit.PeachFruit;
+import sleepless.farmapp.model.Fruit.AvocadoFruit;
 import sleepless.farmapp.model.Fruit.Fruit;
 
 public class Mango implements Plant {
@@ -14,6 +16,8 @@ public class Mango implements Plant {
 
 	public Mango() {
 		plantFruit.add(new MangoFruit());
+		plantFruit.add(new AvocadoFruit());
+		plantFruit.add(new PeachFruit());
 	}
 
 	public void viewPlant() {

@@ -3,8 +3,10 @@ package sleepless.farmapp.model.PlantList;
 import java.util.ArrayList;
 import java.util.Random;
 
+import sleepless.farmapp.model.Fruit.BananaFruit;
 import sleepless.farmapp.model.Fruit.CoconutFruit;
 import sleepless.farmapp.model.Fruit.Fruit;
+import sleepless.farmapp.model.Fruit.PeachFruit;
 
 public class Coconut implements Plant {
 	private String plantName = "Coconut", plantStage = "Seed";
@@ -14,6 +16,8 @@ public class Coconut implements Plant {
 
 	public Coconut() {
 		plantFruit.add(new CoconutFruit());
+		plantFruit.add(new PeachFruit());
+		plantFruit.add(new BananaFruit());
 	}
 
 	public void viewPlant() {

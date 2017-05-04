@@ -5,6 +5,7 @@ import java.util.Random;
 
 import sleepless.farmapp.model.Fruit.DurianFruit;
 import sleepless.farmapp.model.Fruit.Fruit;
+import sleepless.farmapp.model.Fruit.OrangeFruit;
 
 public class Durian implements Plant {
 	private String plantName = "Durian", plantStage = "Seed";
@@ -14,6 +15,7 @@ public class Durian implements Plant {
 
 	public Durian() {
 		plantFruit.add(new DurianFruit());
+		plantFruit.add(new OrangeFruit());
 	}
 
 	public void viewPlant() {
