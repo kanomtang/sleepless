@@ -31,9 +31,10 @@ public class Papaya implements Plant {
 		}
 	}
 
-	public void waterPlant() {
-		// TODO Auto-generated method stub
-
+	public void waterPlant(){
+	    if(contPlantWater<=fullPlantWater ) {
+	     this.contPlantWater++;
+	   }
 	}
 
 	public void plantSleep() {
@@ -143,9 +144,6 @@ public class Papaya implements Plant {
 		this.fullHealth = fullHealth;
 	}
 
-	public void setPlantFruit(ArrayList<Fruit> plantFruit) {
-		this.plantFruit = plantFruit;
-	}
 
 //	public void increasingWater(int i) {
 //		// TODO Auto-generated method stub

@@ -8,7 +8,7 @@ public class PapayaTest {
 	//This class for test Class TestPapayaFruit
 	@Test
     public void testGetPapayaName(){
-    	PapayaFruit t = new PapayaFruit();
+		PapayaFruit t = new PapayaFruit();
     	
 		assertEquals("Papaya Fruit", t.getFruitName());
     }

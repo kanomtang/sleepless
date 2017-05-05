@@ -67,7 +67,8 @@ public class Prompt {
 			System.out.println("5:View inventory");
 			System.out.println("6:Visit shop");
 			System.out.println("7:Sell fruit");
-			System.out.println("8:Exit game ");
+			System.out.println("8:water plant");
+			System.out.println("9:Exit game ");
 
 			scan = new Scanner(System.in);
 			System.out.println("please choose option by pressing the number ");
@@ -167,6 +168,13 @@ public class Prompt {
 				warehouse.SellFruit();
 				System.out.println("After selling the fruit "+warehouse.getMoney()+" Zeny");
 			}
+			else if(input == 8){
+				   for(Plant p : plantlist){
+
+					p.waterPlant();
+				   }
+				   System.out.println("All plant are watered");
+				}
 		} while (checkpoint != 8);
 	}
 
