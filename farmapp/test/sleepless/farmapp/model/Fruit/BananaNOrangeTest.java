@@ -21,8 +21,27 @@ public class BananaNOrangeTest {
 	@Test
 	public void testGetOrangeAmount(){
 		OrangeFruit t = new OrangeFruit();
-		 
+		 t.setFruitAmount(1);
 		assertEquals(1, t.getFruitAmount());
+	}
+	@Test 
+	public void testGetOrangeLevel(){
+		OrangeFruit t = new OrangeFruit();
+		assertEquals("Common", t.getRareLevel());
+	
+		
+	}
+	@Test 
+	public void testAddOrangeAmount(){
+		OrangeFruit t = new OrangeFruit();	
+		t.addFruitAmount(1);
+	}
+	
+	@Test
+	public void testGetOrangeZeny(){
+		OrangeFruit t = new OrangeFruit();
+		t.setZeny(10);
+		assertEquals(10,t.getZeny());
 	}
 	
 	@Test
@@ -33,8 +52,28 @@ public class BananaNOrangeTest {
 	@Test
 	public void testGetBananaAmount(){
 		BananaFruit t = new BananaFruit();
-		 
+		 t.setFruitAmount(1);
 		assertEquals(1, t.getFruitAmount());
 	}
+	@Test 
+	public void testGetBananaLevel(){
+		BananaFruit t = new BananaFruit();
+		assertEquals("Common", t.getRareLevel());
+	
+		
+	}
+	@Test 
+	public void testAddBananaAmount(){
+		BananaFruit t = new BananaFruit();	
+		t.addFruitAmount(1);
+	}
+	
+	@Test
+	public void testGetBananaZeny(){
+		BananaFruit t = new BananaFruit();
+		t.setZeny(10);
+		assertEquals(10,t.getZeny());
+	}
+	
 	
 }
