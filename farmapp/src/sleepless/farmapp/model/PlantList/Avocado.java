@@ -35,9 +35,10 @@ public class Avocado implements Plant {
 
 	}
 
-	public void waterPlant() {
-		// TODO Auto-generated method stub
-
+	public void waterPlant(){
+	    if(contPlantWater<fullPlantWater ) {
+	     this.contPlantWater++;
+	   }
 	}
 
 	public void plantSleep() {

@@ -63,7 +63,7 @@ public class MangoTest {
 			m.plantSleep();
 		}
 		m.waterPlant();
-		assertEquals(2, m.getContPlantWater());
+		assertEquals(5, m.getContPlantWater());
 	}
 	
 	@Test

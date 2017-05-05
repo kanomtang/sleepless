@@ -63,7 +63,7 @@ public class DurianTest {
 			d.plantSleep();
 		}
 		d.waterPlant();
-		assertEquals(2, d.getContPlantWater());
+		assertEquals(5, d.getContPlantWater());
 	}
 	
 	@Test

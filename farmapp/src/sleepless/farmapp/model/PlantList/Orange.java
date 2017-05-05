@@ -31,7 +31,7 @@ public class Orange implements Plant {
 	}
 
 	public void waterPlant() {
-		  if(contPlantWater<=fullPlantWater ) {
+		  if(contPlantWater<fullPlantWater ) {
 			     this.contPlantWater++;
 			   }
 

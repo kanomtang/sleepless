@@ -63,7 +63,7 @@ public class OrangeTest {
 			o.plantSleep();
 		}
 		o.waterPlant();
-		assertEquals(20, o.getContPlantWater());
+		assertEquals(0, o.getContPlantWater());
 	}
 	
 	@Test

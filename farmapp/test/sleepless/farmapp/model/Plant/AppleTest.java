@@ -64,7 +64,7 @@ public class AppleTest {
 			a.plantSleep();
 		}
 		a.waterPlant();
-		assertEquals(2, a.getContPlantWater());
+		assertEquals(4, a.getContPlantWater());
 	}
 	
 	@Test

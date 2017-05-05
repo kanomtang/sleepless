@@ -11,6 +11,7 @@ public class CoconutTest {
 	@Test
 	public void testgetCoconutName(){
 		Coconut c = new Coconut();
+		c.setPlantName("Coconut");
 		assertEquals("Coconut",c.getPlantName());
 	}
 	
@@ -56,9 +57,74 @@ public class CoconutTest {
 	}
 	
 	@Test
-	public void testWaterCoconut(){
-		Coconut c = new Coconut();
-		c.waterPlant();
+	public void testWaterCoconutAfterplant2day(){
+		Coconut a = new Coconut();
+		for(int i = 0;i<2;i++){
+			a.plantSleep();
+		}
+		a.waterPlant();
+		assertEquals(4, a.getContPlantWater());
 	}
-
+	
+	@Test
+	public void testsetstageCoconut(){
+		Coconut a = new Coconut();
+		a.setPlantStage("Seed");
+		assertEquals("Seed", a.getPlantStage());
+	}
+	
+	@Test
+	public void testgetPlantfruitCoconut(){
+		Coconut p = new Coconut();
+		p.getPlantFruit();
+	}
+	
+	
+	@Test
+	public void testsetZenyCoconut(){
+		Coconut p = new Coconut();
+		p.setZeny(10);
+		assertEquals(10, p.getZeny());
+	}
+	@Test
+	public void testsetContAgeCoconut(){
+		Coconut p = new Coconut();
+		p.setContAge(3);
+		assertEquals(3, p.getContAge());
+	}
+	
+	@Test
+	public void testsetFullAgeCoconut(){
+		Coconut p = new Coconut();
+		p.setFullAge(3);
+		assertEquals(3, p.getFullAge());
+	}
+	
+	@Test
+	public void testsetContplantwaterCoconut(){
+		Coconut p = new Coconut();
+		p.setContPlantWater(3);
+		assertEquals(3, p.getContPlantWater());
+	}
+	
+	@Test
+	public void testsetsetFullPlantWaterCoconut(){
+		Coconut p = new Coconut();
+		p.setFullPlantWater(3);
+		assertEquals(3, p.getFullPlantWater());
+	}
+	
+	@Test
+	public void testsetContHealthCoconut(){
+		Coconut p = new Coconut();
+		p.setContHealth(3);
+		assertEquals(3, p.getContHealth());
+	}
+	
+	@Test
+	public void testsetFullHealthCoconut(){
+		Coconut p = new Coconut();
+		p.setFullHealth(3);
+		assertEquals(3, p.getFullHealth());
+	}
 }

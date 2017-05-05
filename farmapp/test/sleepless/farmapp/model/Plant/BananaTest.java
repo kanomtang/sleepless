@@ -64,7 +64,7 @@ public class BananaTest {
 			b.plantSleep();
 		}
 		b.waterPlant();
-		assertEquals(2, b.getContPlantWater());
+		assertEquals(4, b.getContPlantWater());
 	}
 	
 	@Test

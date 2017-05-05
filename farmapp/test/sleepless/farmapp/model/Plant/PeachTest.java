@@ -3,13 +3,13 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-
 import sleepless.farmapp.model.PlantList.Peach;
 public class PeachTest {
 
 	@Test
 	public void testgetPeachName(){
 		Peach p = new Peach();
+		p.setPlantName("Peach");
 		assertEquals("Peach",p.getPlantName());
 	}
 	
@@ -53,9 +53,74 @@ public class PeachTest {
 	}
 	
 	@Test
-	public void testWaterPeach(){
-		Peach p = new Peach();
-		p.waterPlant();
+	public void testWaterPeachAfterplant2day(){
+		Peach a = new Peach();
+		for(int i = 0;i<2;i++){
+			a.plantSleep();
+		}
+		a.waterPlant();
+		assertEquals(4, a.getContPlantWater());
 	}
 	
+	@Test
+	public void testsetstagePeach(){
+		Peach a = new Peach();
+		a.setPlantStage("Seed");
+		assertEquals("Seed", a.getPlantStage());
+	}
+	
+	@Test
+	public void testgetPlantfruitPeach(){
+		Peach p = new Peach();
+		p.getPlantFruit();
+	}
+	
+	
+	@Test
+	public void testsetZenyPeach(){
+		Peach p = new Peach();
+		p.setZeny(10);
+		assertEquals(10, p.getZeny());
+	}
+	@Test
+	public void testsetContAgePeach(){
+		Peach p = new Peach();
+		p.setContAge(3);
+		assertEquals(3, p.getContAge());
+	}
+	
+	@Test
+	public void testsetFullAgePeach(){
+		Peach p = new Peach();
+		p.setFullAge(3);
+		assertEquals(3, p.getFullAge());
+	}
+	
+	@Test
+	public void testsetContplantwaterPeach(){
+		Peach p = new Peach();
+		p.setContPlantWater(3);
+		assertEquals(3, p.getContPlantWater());
+	}
+	
+	@Test
+	public void testsetsetFullPlantWaterPeach(){
+		Peach p = new Peach();
+		p.setFullPlantWater(3);
+		assertEquals(3, p.getFullPlantWater());
+	}
+	
+	@Test
+	public void testsetContHealthPeach(){
+		Peach p = new Peach();
+		p.setContHealth(3);
+		assertEquals(3, p.getContHealth());
+	}
+	
+	@Test
+	public void testsetFullHealthPeach(){
+		Peach p = new Peach();
+		p.setFullHealth(3);
+		assertEquals(3, p.getFullHealth());
+	}
 }
