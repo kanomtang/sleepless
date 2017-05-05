@@ -35,7 +35,9 @@ public class Apple implements Plant {
 	}
 
 	public void waterPlant() {
-		// TODO Auto-generated method stub
+		if(contPlantWater<=fullPlantWater){
+			this.contPlantWater++;
+		}
 
 	}
 

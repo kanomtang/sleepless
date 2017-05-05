@@ -7,9 +7,9 @@ import sleepless.farmapp.model.Fruit.Fruit;
 import sleepless.farmapp.model.Fruit.OrangeFruit;
 
 public class Orange implements Plant {
-	private String plantName = "Orange", plantStage = "Seed";
+	private String plantName = "Orange", plantStage = "Seed",RareLevel="common";
 	private int contAge = 1, fullAge = 20, contPlantWater = 10, fullPlantWater = 10, contHealth = 8, fullHealth = 8;
-	private int zeny = 10;
+	private int zeny = 10,FruitAmount =1;
 	private ArrayList<Fruit> plantFruit = new ArrayList<Fruit>();
 
 	public Orange() {
@@ -31,7 +31,9 @@ public class Orange implements Plant {
 	}
 
 	public void waterPlant() {
-		// TODO Auto-generated method stub
+		  if(contPlantWater<=fullPlantWater ) {
+			     this.contPlantWater++;
+			   }
 
 	}
 
@@ -141,10 +143,18 @@ public class Orange implements Plant {
 	public void setFullHealth(int fullHealth) {
 		this.fullHealth = fullHealth;
 	}
-
-	public void setPlantFruit(ArrayList<Fruit> plantFruit) {
-		this.plantFruit = plantFruit;
+	public void setFruitAmount(int fruitAmount) {
+		FruitAmount = fruitAmount;
 	}
+	public void addFruitAmount(int amount) {
+		// TODO Auto-generated method stub
+		this.FruitAmount+=amount;
+	}
+	public String getRareLevel() {
+		return RareLevel;
+	}
+	
+
 
 //	public void increasingWater(int i) {
 //		// TODO Auto-generated method stub
