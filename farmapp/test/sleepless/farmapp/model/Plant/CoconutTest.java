@@ -53,7 +53,7 @@ public class CoconutTest {
 		
 		assertEquals(0, c.getContHealth());
 		
-		assertEquals(null, c.getPlantName());
+		assertEquals("null", c.getPlantName());
 	}
 	
 	@Test

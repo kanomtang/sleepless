@@ -60,7 +60,7 @@ public class AvocadoTest {
 		
 		assertEquals(0, t.getContHealth());
 		
-		assertEquals(null, t.getPlantName());
+		assertEquals("null", t.getPlantName());
 		//this is for testing the growup method
 				assertEquals("dead", t.getPlantStage());
 				System.out.println(t.getPlantStage());

@@ -7,7 +7,7 @@ import sleepless.farmapp.model.Fruit.Fruit;
 
 public class emptyPlant implements Plant {
 
-	private String plantName = "", plantStage = "Seed";
+	private String plantName = "null", plantStage = "Seed";
 	private int contAge = 0, fullAge = 0, contPlantWater = 0, fullPlantWater = 0, contHealth = 0, fullHealth = 0;
 	// private String[] plantFruit = new String [1];
 	private ArrayList<Fruit> plantFruit = new ArrayList<Fruit>();
@@ -168,7 +168,7 @@ public class emptyPlant implements Plant {
 		this.fullAge = 0;
 		this.fullHealth = 0;
 		this.fullPlantWater = 0;
-		this.plantName = null;
+		this.plantName="null";
 		this.plantStage = null;
 	}
 

@@ -54,7 +54,7 @@ public class DurianTest {
 		
 		assertEquals(0, d.getContHealth());
 		
-		assertEquals(null, d.getPlantName());
+		assertEquals("null", d.getPlantName());
 	}
 	@Test
 	public void testWaterDurianAfterplant2day(){

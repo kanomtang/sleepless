@@ -87,9 +87,9 @@ public class Prompt {
 				for (Plant a : seedlist) {
 					System.out.println(countloop2 + " : " + a.getPlantName());
 					countloop2++;
-				}
+				}System.out.println("Press 10 and hit enter for back to main menu");
 				int loop2input = scan.nextInt();
-				System.out.println("Press 10 and hit enter for back to main menu");
+				
 				if (loop2input == 10) {
 					break;
 				} else {

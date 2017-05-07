@@ -49,7 +49,7 @@ public class PeachTest {
 		
 		assertEquals(0, p.getContHealth());
 		
-		assertEquals(null, p.getPlantName());
+		assertEquals("null", p.getPlantName());
 	}
 	
 	@Test

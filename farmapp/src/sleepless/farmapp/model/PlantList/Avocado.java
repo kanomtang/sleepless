@@ -28,10 +28,7 @@ public class Avocado implements Plant {
 				+ "longer it can live without water)");
 		System.out.println("   Water:(" + contPlantWater + "//" + fullPlantWater + ") ");
 		System.out.println("");
-		for (int i = 0; i < plantFruit.size(); i++) {
-			System.out.println("   Fruit:" + plantFruit.get(i));
-
-		}
+		
 
 	}
 
@@ -186,7 +183,7 @@ public class Avocado implements Plant {
 		this.fullAge = 0;
 		this.fullHealth = 0;
 		this.fullPlantWater = 0;
-		this.plantName = null;
+		this.plantName="null";
 		this.plantStage = null;
 	}
 

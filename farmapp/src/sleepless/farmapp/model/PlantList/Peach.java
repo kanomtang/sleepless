@@ -24,9 +24,7 @@ public class Peach implements Plant {
 		System.out.println("   Health:(" + contHealth + "//" + fullHealth + ") (more hearths, "
 				+ "longer it can live without water)");
 		System.out.println("   Water:(" + contPlantWater + "//" + fullPlantWater + ") ");
-		for (int i = 0; i < plantFruit.size(); i++) {
-			System.out.println("   Fruit:" + plantFruit.get(i));
-		}
+		
 
 	}
 
@@ -181,7 +179,7 @@ public class Peach implements Plant {
 		this.fullAge = 0;
 		this.fullHealth = 0;
 		this.fullPlantWater = 0;
-		this.plantName = null;
+		this.plantName="null";
 		this.plantStage = null;
 	}
 

@@ -54,7 +54,7 @@ public class MangoTest {
 		
 		assertEquals(0, m.getContHealth());
 		
-		assertEquals(null, m.getPlantName());
+		assertEquals("null", m.getPlantName());
 	}
 	@Test
 	public void testWaterMangoAfterplant2day(){

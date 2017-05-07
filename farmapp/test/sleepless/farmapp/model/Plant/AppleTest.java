@@ -54,7 +54,7 @@ public class AppleTest {
 		
 		assertEquals(0, a.getContHealth());
 		
-		assertEquals(null, a.getPlantName());
+		assertEquals("null", a.getPlantName());
 	}
 	
 	@Test

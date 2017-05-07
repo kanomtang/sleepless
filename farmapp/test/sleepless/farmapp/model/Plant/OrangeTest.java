@@ -54,7 +54,7 @@ public class OrangeTest {
 		
 		assertEquals(0, o.getContHealth());
 		
-		assertEquals(null, o.getPlantName());
+		assertEquals("null", o.getPlantName());
 	}
 	@Test
 	public void testWaterOrangeAfterplant20day(){
